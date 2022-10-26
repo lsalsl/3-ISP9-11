@@ -1,0 +1,821 @@
+#include <iostream>
+using namespace std;
+int main() {
+	setlocale(0, "");
+	short question = 0;
+	string name;
+	short usless;
+	while (true)
+	{
+		system("cls");
+		cout << "Ваше имя: " << name << "\n";
+		cout << "[1] Начать игру\n";
+		cout << "[2] Настройки\n";
+		cout << "[3] Правила\n";
+		cout << "[4] Выход\n\n";
+		cout << "[+] Выбрать: ";
+
+		short score = 0;
+		short health = 3;
+		string menu;
+		short exit;
+		string question1 = "Логичексий тип данный";
+		string question2 = "Какой размер ячейки выделяется для int";
+		string question3 = "На каком языке эта программа";
+		string question4 = "Символьный тип данных";
+		string question5 = "Какой размер ячейки выделяется для double";
+		string question6 = "Оператор присваивания";
+		string question7 = "Какой размер ячейки выделяется для short";
+		string question8 = "Правильная инициализация";
+		string question9 = "Какой размер ячейки выделяется для long";
+		string question10 = "Команда для ввода";
+		string question11 = "Какой размер ячейки выделяется для char";
+		string question12 = "Команда для Вывода";
+
+		cin >> menu;
+		if (menu == "1")
+		{
+			if (name == "")
+			{
+				int asd;
+				system("cls");
+				cout << "Введите имя и количество вопросов в настройках\n";
+				cout << "[1] Выйти\n";
+				cin >> asd;
+				if (asd == 1)
+				{
+					continue;
+				}
+			}
+			else
+			{
+				if (question == 5)
+				{
+					system("cls");
+					int answer1;
+					cout << "Ваше имя: " << name << endl;
+					cout << "Очки: " << score << endl;
+					cout << "Ваши жизни: " << health << endl;
+					cout << question1 << endl;
+					cout << "Варианты ответов: \n";
+					cout << "[1] bool\n";
+					cout << "[2] int\n";
+					cout << "[3] char\n\n";
+					cout << "Ваш ответ: ";
+					cin >> answer1;
+					if (answer1 == 1)
+					{
+						score = score + 1;
+					}
+					else
+					{
+						health = health - 1;
+					}
+					if (health < 1)
+					{
+						system("cls");
+						cout << "Вы проиграли! " << "Ваши очки: " << score << endl;
+						cout << "[1] Выйти\n";
+						cout << "Выбрать:";
+						cin >> usless;
+						if (usless == 1)
+						{
+							continue;
+						}
+						if (!cin)
+						{
+							cin.clear();
+							cin.get();
+						}
+					}
+					else
+					{
+						system("cls");
+						int answer2;
+						cout << "Ваше имя: " << name << endl;
+						cout << "Очки: " << score << endl;
+						cout << "Ваши жизни: " << health << endl;
+						cout << question2 << endl;
+						cout << "Варианты ответов: \n";
+						cout << "[1] 1b\n";
+						cout << "[2] 4b\n";
+						cout << "[3] 8b\n\n";
+						cout << "Ваш ответ: ";
+						cin >> answer2;
+						if (answer2 == 2)
+						{
+							score = score + 1;
+						}
+						else
+						{
+							health = health - 1;
+						}
+					}
+					system("cls");
+					int answer3;
+					cout << "Ваше имя: " << name << endl;
+					cout << "Очки: " << score << endl;
+					cout << "Ваши жизни: " << health << endl;
+					cout << question3 << endl;
+					cout << "Варианты ответов: \n";
+					cout << "[1] Pascal\n";
+					cout << "[2] Python\n";
+					cout << "[3] C++\n\n";
+					cout << "Ваш ответ: ";
+					cin >> answer3;
+
+					if (answer3 == 3)
+					{
+						score = score + 1;
+					}
+					else
+					{
+						health = health - 1;
+					}
+					if (health < 1)
+					{
+						system("cls");
+						cout << "Вы проиграли! " << "Ваши очки: " << score << endl;
+						cout << "[1] Выйти\n";
+						cout << "Выбрать:";
+						cin >> usless;
+						if (usless == 1)
+						{
+							continue;
+						}
+						if (!cin)
+						{
+							cin.clear();
+							cin.get();
+						}
+					}
+					else
+					{
+						system("cls");
+						int answer4;
+						cout << "Ваше имя: " << name << endl;
+						cout << "Очки: " << score << endl;
+						cout << "Ваши жизни: " << health << endl;
+						cout << question4 << endl;
+						cout << "Варианты ответов: \n";
+						cout << "[1] char\n";
+						cout << "[2] double\n";
+						cout << "[3] short\n\n";
+						cout << "Ваш ответ: ";
+						cin >> answer4;
+						if (answer4 == 1)
+						{
+							score = score + 1;
+						}
+						else
+						{
+							health = health - 1;
+						}
+					}
+					if (health < 1)
+					{
+						system("cls");
+						cout << "Вы проиграли! " << "Ваши очки: " << score << endl;
+						cout << "[1] Выйти\n";
+						cout << "Выбрать:";
+						cin >> usless;
+						if (usless == 1)
+						{
+							continue;
+						}
+						if (!cin)
+						{
+							cin.clear();
+							cin.get();
+						}
+					}
+					else
+					{
+						system("cls");
+						int answer5;
+						cout << "Ваше имя: " << name << endl;
+						cout << "Очки: " << score << endl;
+						cout << "Ваши жизни: " << health << endl;
+						cout << question5 << endl;
+						cout << "Варианты ответов: \n";
+						cout << "[1] 4b\n";
+						cout << "[2] 8b\n";
+						cout << "[3] 16b\n\n";
+						cout << "Ваш ответ: ";
+						cin >> answer5;
+						if (answer5 == 2)
+						{
+							score = score + 1;
+						}
+						else
+						{
+							health = health - 1;
+						}
+					}
+					if (health < 1)
+					{
+						system("cls");
+						cout << "Вы проиграли! " << "Ваши очки: " << score << endl;
+						cout << "[1] Выйти\n";
+						cout << "Выбрать:";
+						cin >> usless;
+						if (usless == 1)
+						{
+							continue;
+						}
+						if (!cin)
+						{
+							cin.clear();
+							cin.get();
+						}
+					}
+					else
+					{
+						int n;
+						cout << "Вы победили! У вас: " << score << " очков\n";
+						cout << "[1] Выйти в меню";
+						cin >> n;
+						if (n == 1)
+						{
+							continue;
+						}
+						if (!cin)
+						{
+							cin.clear();
+							cin.get();
+						}
+					}
+				}
+				if (question == 12)
+				{
+					system("cls");
+					int answer1;
+					cout << "Ваше имя: " << name << endl;
+					cout << "Очки: " << score << endl;
+					cout << "Ваши жизни: " << health << endl;
+					cout << question1 << endl;
+					cout << "Варианты ответов: \n";
+					cout << "[1] bool\n";
+					cout << "[2] int\n";
+					cout << "[3] char\n\n";
+					cout << "Ваш ответ: ";
+					cin >> answer1;
+					if (answer1 == 1)
+					{
+						score = score + 1;
+					}
+					else
+					{
+						health = health - 1;
+					}
+					system("cls");
+					int answer2;
+					cout << "Ваше имя: " << name << endl;
+					cout << "Очки: " << score << endl;
+					cout << "Ваши жизни: " << health << endl;
+					cout << question2 << endl;
+					cout << "Варианты ответов: \n";
+					cout << "[1] 1b\n";
+					cout << "[2] 4b\n";
+					cout << "[3] 8b\n\n";
+					cout << "Ваш ответ: ";
+					cin >> answer2;
+					if (answer2 == 2)
+					{
+						score = score + 1;
+					}
+					else
+					{
+						health = health - 1;
+					}
+					system("cls");
+					int answer3;
+					cout << "Ваше имя: " << name << endl;
+					cout << "Очки: " << score << endl;
+					cout << "Ваши жизни: " << health << endl;
+					cout << question3 << endl;
+					cout << "Варианты ответов: \n";
+					cout << "[1] Pascal\n";
+					cout << "[2] Python\n";
+					cout << "[3] C++\n\n";
+					cout << "Ваш ответ: ";
+					cin >> answer3;
+
+					if (answer3 == 3)
+					{
+						score = score + 1;
+					}
+					else
+					{
+						health = health - 1;
+					}
+					if (health < 1)
+					{
+						system("cls");
+						cout << "Вы проиграли! " << "Ваши очки: " << score << endl;
+						cout << "[1] Выйти\n";
+						cout << "Выбрать:";
+						cin >> usless;
+						if (usless == 1)
+						{
+							continue;
+						}
+						if (!cin)
+						{
+							cin.clear();
+							cin.get();
+						}
+					}
+					else
+					{
+						system("cls");
+						int answer4;
+						cout << "Ваше имя: " << name << endl;
+						cout << "Очки: " << score << endl;
+						cout << "Ваши жизни: " << health << endl;
+						cout << question4 << endl;
+						cout << "Варианты ответов: \n";
+						cout << "[1] char\n";
+						cout << "[2] double\n";
+						cout << "[3] short\n\n";
+						cout << "Ваш ответ: ";
+						cin >> answer4;
+						if (answer4 == 1)
+						{
+							score = score + 1;
+						}
+						else
+						{
+							health = health - 1;
+						}
+					}
+					if (health < 1)
+					{
+						system("cls");
+						cout << "Вы проиграли! " << "Ваши очки: " << score << endl;
+						cout << "[1] Выйти\n";
+						cout << "Выбрать:";
+						cin >> usless;
+						if (usless == 1)
+						{
+							continue;
+						}
+						if (!cin)
+						{
+							cin.clear();
+							cin.get();
+						}
+					}
+					else
+					{
+						system("cls");
+						int answer5;
+						cout << "Ваше имя: " << name << endl;
+						cout << "Очки: " << score << endl;
+						cout << "Ваши жизни: " << health << endl;
+						cout << question5 << endl;
+						cout << "Варианты ответов: \n";
+						cout << "[1] 4b\n";
+						cout << "[2] 8b\n";
+						cout << "[3] 16b\n\n";
+						cout << "Ваш ответ: ";
+						cin >> answer5;
+						if (answer5 == 2)
+						{
+							score = score + 1;
+						}
+						else
+						{
+							health = health - 1;
+						}
+					}
+					if (health < 1)
+					{
+						system("cls");
+						cout << "Вы проиграли! " << "Ваши очки: " << score << endl;
+						cout << "[1] Выйти\n";
+						cout << "Выбрать:";
+						cin >> usless;
+						if (usless == 1)
+						{
+							continue;
+						}
+						if (!cin)
+						{
+							cin.clear();
+							cin.get();
+						}
+					}
+					else
+					{
+						system("cls");
+						int answer6;
+						cout << "Ваше имя: " << name << endl;
+						cout << "Очки: " << score << endl;
+						cout << "Ваши жизни: " << health << endl;
+						cout << question6 << endl;
+						cout << "Варианты ответов: \n";
+						cout << "[1] ==\n";
+						cout << "[2] -\n";
+						cout << "[3] =\n\n";
+						cout << "Ваш ответ: ";
+						cin >> answer6;
+						if (answer6 == 3)
+						{
+							score = score + 1;
+						}
+						else
+						{
+							health = health - 1;
+						}
+					}
+					if (health < 1)
+					{
+						system("cls");
+						cout << "Вы проиграли! " << "Ваши очки: " << score << endl;
+						cout << "[1] Выйти\n";
+						cout << "Выбрать:";
+						cin >> usless;
+						if (usless == 1)
+						{
+							continue;
+						}
+						if (!cin)
+						{
+							cin.clear();
+							cin.get();
+						}
+					}
+					else
+					{
+						system("cls");
+						int answer7;
+						cout << "Ваше имя: " << name << endl;
+						cout << "Очки: " << score << endl;
+						cout << "Ваши жизни: " << health << endl;
+						cout << question7 << endl;
+						cout << "Варианты ответов: \n";
+						cout << "[1] 3b\n";
+						cout << "[2] 2b\n";
+						cout << "[3] 1b\n\n";
+						cout << "Ваш ответ: ";
+						cin >> answer7;
+						if (answer7 == 2)
+						{
+							score = score + 1;
+						}
+						else
+						{
+							health = health - 1;
+						}
+					}
+					if (health < 1)
+					{
+						system("cls");
+						cout << "Вы проиграли! " << "Ваши очки: " << score << endl;
+						cout << "[1] Выйти\n";
+						cout << "Выбрать:";
+						cin >> usless;
+						if (usless == 1)
+						{
+							continue;
+						}
+						if (!cin)
+						{
+							cin.clear();
+							cin.get();
+						}
+					}
+					else
+					{
+						system("cls");
+						int answer8;
+						cout << "Ваше имя: " << name << endl;
+						cout << "Очки: " << score << endl;
+						cout << "Ваши жизни: " << health << endl;
+						cout << question8 << endl;
+						cout << "Варианты ответов: \n";
+						cout << "[1] int A = 10\n";
+						cout << "[2] A int = 10\n";
+						cout << "[3] 10 = int A\n\n";
+						cout << "Ваш ответ: ";
+						cin >> answer8;
+						if (answer8 == 1)
+						{
+							score = score + 1;
+						}
+						else
+						{
+							health = health - 1;
+						}
+					}
+					if (health < 1)
+					{
+						system("cls");
+						cout << "Вы проиграли! " << "Ваши очки: " << score << endl;
+						cout << "[1] Выйти\n";
+						cout << "Выбрать:";
+						cin >> usless;
+						if (usless == 1)
+						{
+							continue;
+						}
+						if (!cin)
+						{
+							cin.clear();
+							cin.get();
+						}
+					}
+					else
+					{
+						system("cls");
+						int answer9;
+						cout << "Ваше имя: " << name << endl;
+						cout << "Очки: " << score << endl;
+						cout << "Ваши жизни: " << health << endl;
+						cout << question9 << endl;
+						cout << "Варианты ответов: \n";
+						cout << "[1] 4b\n";
+						cout << "[2] 2b\n";
+						cout << "[3] 32b\n\n";
+						cout << "Ваш ответ: ";
+						cin >> answer9;
+						if (answer9 == 1)
+						{
+							score = score + 1;
+						}
+						else
+						{
+							health = health - 1;
+						}
+					}
+					if (health < 1)
+					{
+						system("cls");
+						cout << "Вы проиграли! " << "Ваши очки: " << score << endl;
+						cout << "[1] Выйти\n";
+						cout << "Выбрать:";
+						cin >> usless;
+						if (usless == 1)
+						{
+							continue;
+						}
+						if (!cin)
+						{
+							cin.clear();
+							cin.get();
+						}
+					}
+					else
+					{
+						system("cls");
+						int answer10;
+						cout << "Ваше имя: " << name << endl;
+						cout << "Очки: " << score << endl;
+						cout << "Ваши жизни: " << health << endl;
+						cout << question10 << endl;
+						cout << "Варианты ответов: \n";
+						cout << "[1] Cin\n";
+						cout << "[2] Cout\n";
+						cout << "[3] Endl\n\n";
+						cout << "Ваш ответ: ";
+						cin >> answer10;
+						if (answer10 == 1)
+						{
+							score = score + 1;
+						}
+						else
+						{
+							health = health - 1;
+						}
+					}
+					if (health < 1)
+					{
+						system("cls");
+						cout << "Вы проиграли! " << "Ваши очки: " << score << endl;
+						cout << "[1] Выйти\n";
+						cout << "Выбрать:";
+						cin >> usless;
+						if (usless == 1)
+						{
+							continue;
+						}
+						if (!cin)
+						{
+							cin.clear();
+							cin.get();
+						}
+					}
+					else
+					{
+						system("cls");
+						int answer11;
+						cout << "Ваше имя: " << name << endl;
+						cout << "Очки: " << score << endl;
+						cout << "Ваши жизни: " << health << endl;
+						cout << question11 << endl;
+						cout << "Варианты ответов: \n";
+						cout << "[1] 4b\n";
+						cout << "[2] 12b\n";
+						cout << "[3] 1b\n\n";
+						cout << "Ваш ответ: ";
+						cin >> answer11;
+						if (answer11 == 3)
+						{
+							score = score + 1;
+						}
+						else
+						{
+							health = health - 1;
+						}
+					}
+					if (health < 1)
+					{
+						system("cls");
+						cout << "Вы проиграли! " << "Ваши очки: " << score << endl;
+						cout << "[1] Выйти\n";
+						cout << "Выбрать:";
+						cin >> usless;
+						if (usless == 1)
+						{
+							continue;
+						}
+						if (!cin)
+						{
+							cin.clear();
+							cin.get();
+						}
+					}
+					else
+					{
+						system("cls");
+						int answer12;
+						cout << "Ваше имя: " << name << endl;
+						cout << "Очки: " << score << endl;
+						cout << "Ваши жизни: " << health << endl;
+						cout << question12 << endl;
+						cout << "Варианты ответов: \n";
+						cout << "[1] Cin\n";
+						cout << "[2] Cout\n";
+						cout << "[3] Endl\n\n";
+						cout << "Ваш ответ: ";
+						cin >> answer12;
+						if (answer12 == 2)
+						{
+							score = score + 1;
+						}
+						else
+						{
+							health = health - 1;
+						}
+					}
+					if (health < 1)
+					{
+						system("cls");
+						cout << "Вы проиграли! " << "Ваши очки: " << score << endl;
+						cout << "[1] Выйти\n";
+						cout << "Выбрать:";
+						cin >> usless;
+						if (usless == 1)
+						{
+							continue;
+						}
+						if (!cin)
+						{
+							cin.clear();
+							cin.get();
+						}
+					}
+					else
+					{
+						int n;
+						cout << "Вы победили! У вас: " << score << " очков\n";
+						cout << "[1] Выйти в меню";
+						cin >> n;
+						if (n == 1)
+						{
+							continue;
+						}
+
+					}
+				}
+				if (question == 0)
+				{
+					int qwe;
+					system("cls");
+					cout << "Введите имя и количество вопросов в настройках\n";
+					cout << "[1] Выйти\n";
+					cin >> qwe;
+					if (qwe == 1)
+					{
+						continue;
+					}
+					if (!cin)
+					{
+						cin.clear();
+						cin.get();
+					}
+				}
+			}
+		}
+		if (menu == "3")
+		{
+			system("cls");
+			cout << "Правила:\n";
+			cout << "За каждый правильный ответ вы получаете одно очко\n";
+			cout << "За каждный не правильный ответ у вас отнимается одна жизнь\n";
+			cout << "Удачи!\n\n";
+			cout << "[1] Назад\n\n";
+			cout << "[+] Выбрать: ";
+			cin >> exit;
+			if (exit == 1)
+			{
+				continue;
+			}
+		}
+		if (menu == "4")
+		{
+			return 0;
+		}
+		if (menu == "2")
+		{
+			system("cls");
+			cout << "Настройки:\n\n";
+			cout << "[1] Цвет\n";
+			cout << "[2] Кол-во вопросов\n";
+			cout << "[3] Имя игрока\n";
+			cout << "[4] Назад\n\n";
+			cout << "[+]Выбрать: ";
+
+			string settings;
+			short colors;
+			cin >> settings;
+			if (settings == "1")
+			{
+				system("cls");
+				cout << "Выбрать цвет:\n\n";
+				cout << "[1] Жёлтый\n";
+				cout << "[2] Зеленый\n";
+				cout << "[3] Красный\n";
+				cout << "[4] Синий\n";
+				cout << "[5] Фиолетовый\n\n";
+				cout << "[+]Выбрать: ";
+				cin >> colors;
+				if (colors == 1)
+				{
+					system("color 0E");
+				}
+				if (colors == 2)
+				{
+					system("color 02");
+				}
+				if (colors == 3)
+				{
+					system("color 04");
+				}
+				if (colors == 4)
+				{
+					system("color 01");
+				}
+				if (colors == 5)
+				{
+					system("color 05");
+				}
+			}
+			if (settings == "2")
+			{
+				short abc;
+				system("cls");
+				cout << "Выбрать кол-во вопросов:\n\n";
+				cout << "[1] 5\n";
+				cout << "[2] 12\n\n";
+				cout << "[+] Выбрать: ";
+				cin >> abc;
+				if (abc == 1)
+				{
+					question = 5;
+				}
+				if (abc == 2)
+				{
+					question = 12;
+				}
+			}
+			if (settings == "3")
+			{
+				system("cls");
+				cout << "[+] Введите имя игрока: \n";
+				cin >> name;
+				continue;
+			}
+			if (settings == "4")
+			{
+				continue;
+			}
+		}
+		if (!cin)
+		{
+			cin.clear();
+			cin.get();
+		}
+	}
+}
