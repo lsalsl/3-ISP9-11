@@ -1,0 +1,321 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	setlocale(0, "");
+	int menu;
+	int x = 1;
+	cout << "Геометрические фигуры\n\n";
+	cout << "[1] Линия\n";
+	cout << "[2] Квадрат\n";
+	cout << "[3] Прямоугольник\n";
+	cout << "[4] Треугольник\n";
+	cout << "[5] Решётка\n";
+	cout << "[6] Крестик\n";
+	cout << "[7] Плюс\n";
+	cout << "[8] Ромб\n\n";
+	cout << "Выберите фигуру: ";
+	cin >> menu;
+	if (menu == 1)
+	{
+		system("cls");
+		cout << "[+] Фигура: Линия\n\n";
+		int l;
+		cout << "[1] Вертикальная\n";
+		cout << "[2] Горизонтальная\n\n";
+		cout << "[+] Выберите тип: ";
+		cin >> l;
+		int s;
+		char txt;
+		system("cls");
+		cout << "[+] Выберите длинну: ";
+		cin >> s;
+		system("cls");
+		cout << "[+] Выберите текстуру: ";
+		cin >> txt;
+
+		if (l == 1)
+		{
+			system("cls");
+			while (x <= s)
+			{
+				cout << txt << "\n";
+				x = x + 1;
+			}
+		}
+		if (l == 2)
+		{
+			system("cls");
+			while (x <= s)
+			{
+				cout << txt;
+				x = x + 1;
+			}
+		}
+	}
+	if (menu == 2)
+	{
+		int kv;
+		int s;
+		char txt;
+		system("cls");
+		cout << "[+] Фигура: Квадрат\n\n";
+		cout << "[1] Заполненный\n";
+		cout << "[2] Пустой\n\n";
+		cout << "[+] Выберите тип: ";
+		cin >> kv;
+		system("cls");
+		cout << "[+] Выберите размер: ";
+		cin >> s;
+		system("cls");
+		cout << "[+] Выберите Текстуру: ";
+		cin >> txt;
+		if (kv == 1)
+		{
+			system("cls");
+			for (int i = 1; i <= s; i++)
+			{
+				for (int k = 1; k <= s; k++)
+				{
+					cout << txt << " ";
+				}
+				cout << endl;
+			}
+		}
+		if (kv == 2)
+		{
+			system("cls");
+			for (int i = 1; i <= s; i++)
+			{
+				for (int k = 1; k <= s; k++)
+				{
+					if (i == 1 || k == 1 || i == s || k == s)
+						cout << txt << " ";
+					else
+						cout << "  ";
+				}
+				cout << endl;
+			}
+			cout << endl;
+		}
+	}
+
+	if (menu == 3)
+	{
+		int pr;
+		int length;
+		int width;
+		char txt;
+		system("cls");
+		cout << "[+] Фигура: Прямоугольник\n\n";
+		cout << "[1] Заполненный\n";
+		cout << "[2] Пустой\n\n";
+		cout << "[+] Выберите тип: ";
+
+		cin >> pr;
+		system("cls");
+		cout << "[+] Выберите Длинну: ";
+		cin >> length;
+		system("cls");
+		cout << "[+] Выберите Ширину: ";
+		cin >> width;
+		system("cls");
+		cout << "[+] Выберите Текстуру: ";
+		cin >> txt;
+		if (pr == 1)
+		{
+			system("cls");
+			for (int i = 1; i <= length; i++)
+			{
+				for (int j = 1; j <= width; j++)
+				{
+					cout << txt << " ";
+				}
+				cout << endl;
+			}
+		}
+		if (pr == 2)
+		{
+			system("cls");
+			for (int i = 1; i <= length; i++)
+			{
+				for (int j = 1; j <= width; j++)
+				{
+					if (i == 1 || j == 1 || i == length || j == width)
+						cout << txt << " ";
+					else
+						cout << "  ";
+				}
+				cout << endl;
+			}
+		}
+	}
+
+	if (menu == 4)
+	{
+		int tr;
+		int s;
+		char txt;
+		int g = 0;
+		system("cls");
+		cout << "[+] Фигура: Треугольник\n\n";
+		cout << "[1] Заполненный\n";
+		cout << "[2] Пустой\n\n";
+		cout << "[+] Выберите тип: ";
+		cin >> tr;
+		system("cls");
+		cout << "[+] Выберите размер: ";
+		cin >> s;
+		system("cls");
+		cout << "[+] Выберите Текстуру: ";
+		cin >> txt;
+		if (tr == 1)
+		{
+			for (int i = 0; s > i; s--)
+			{
+				for (int j = 0; j < s; j++)
+				{
+					cout << " ";
+				}
+				for (int i = 0; i <= g * 2; i++)
+				{
+					cout << txt;
+				}
+				cout << endl;
+				g++;
+			}
+		}
+		if (tr == 2)
+		{
+			for (int i = 1; i <= s; i++)
+			{
+				for (int j = 1; j <= s * 2; j++)
+				{
+					if (j == ((s + 1) - (i - 1)) || j == ((s + 1) + (i - 1)))
+					{
+						cout << txt;
+					}
+					else
+					{
+						if (i == s && j > 1)
+						cout << txt;
+						else
+						cout << " ";
+
+					}
+				}
+				cout << endl;
+			}
+		}
+	}
+
+	if (menu == 5)
+	{
+		int s;
+		char txt;
+		system("cls");
+		cout << "[+] Фигура: Решётка\n\n";
+		cout << "[+] Выберите размер: ";
+		cin >> s;
+		system("cls");
+		cout << "[+] Выберите Текстуру: ";
+		cin >> txt;
+		system("cls");
+		for (int i = 1; i <= s; i++)
+		{
+			for (int j = 1; j <= s; j++)
+			{
+				if (i % 2 == 0 || j % 2 == 0)
+					cout << txt << " ";
+				else
+					cout << "  ";
+			}
+			cout << endl;
+		}
+		cout << endl;
+	}
+
+	if (menu == 6)
+	{
+		int s;
+		char txt;
+		system("cls");
+		cout << "[+] Фигура: Крестик\n\n";
+		cout << "[+] Выберите размер: ";
+		cin >> s;
+		system("cls");
+		cout << "[+] Выберите Текстуру: ";
+		cin >> txt;
+		system("cls");
+		for (int i = 0; i <= s; i++)
+		{
+			for (int j = 0; j <= s; j++)
+			{
+				if (i == j || i + j == s)
+					cout << txt << " ";
+				else
+					cout << "  ";
+			}
+			cout << endl;
+		}
+		cout << endl;
+	}
+	if (menu == 7)
+	{
+		int s;
+		char txt;
+		system("cls");
+		cout << "[+] Фигура: Плюс\n\n";
+		cout << "[+] Выберите четный размер: ";
+		cin >> s;
+		system("cls");
+		cout << "[+] Выберите Текстуру: ";
+		cin >> txt;
+		system("cls");
+		for (int i = 0; i <= s; i++)
+		{
+			for (int j = 0; j <= s; j++)
+			{
+				if (i == s / 2 || j == s / 2)
+				{
+					cout << txt << " ";
+				}
+				else
+				{
+					cout << "  ";
+				}
+			}
+			cout << endl;
+		}
+		cout << endl;
+	}
+	if (menu == 8)
+	{
+		int s;
+		char txt;
+		system("cls");
+		cout << "[+] Фигура: Ромб\n\n";
+		cout << "[+] Выберите чётный размер: ";
+		cin >> s;
+		system("cls");
+		cout << "[+] Выберите Текстуру: ";
+		cin >> txt;
+		system("cls");
+		for (int y = 0; y <= s; y++)
+		{
+			for (int x = 0; x <= s; x++)
+			{
+				if (y == s / 2 + x || y == s / 2 - x || x == s / 2 + y || x == s - y + s / 2)
+					cout << txt << " ";
+				else
+					cout << "  ";
+			}
+			cout << endl;
+		}
+	}
+
+
+	int _;
+	cin >> _ ;
+	return 0;
+}
