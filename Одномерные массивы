@@ -1,0 +1,69 @@
+#include <iostream>
+using namespace std;
+int main() {
+	setlocale(0, "");
+	cout << "[+] Массив INT:\n";
+	int arrInt[10] = { 1,20,32,4,1,2,2,54,23,0 };
+	for (int i = 0; i < 10; i++)
+	{
+	cout << "arrInt [" << i << "] | значение: " << arrInt[i] << endl;
+	}
+
+	cout << "\n\n[+] Массив SHORT:\n";
+	short arrShort[10] = { 2,22,42,8,2,3,5,4,7,0 };
+	for (int i = 0; i < 10; i++)
+	{
+	cout << "arrShort [" << i << "] | значение: " << arrShort[i] << endl;
+	}
+
+	cout << "\n\n[+] Массив LONG:\n";
+	long arrLong[10] = { 324,183,1703,17,92,13,28,322,444,100 };
+	for (int i = 0; i < 10; i++)
+	{
+	cout << "arrLong [" << i << "] | значение: " << arrLong[i] << endl;
+	}
+	
+	cout << "\n\n[+] Массив FLOAT:\n";
+	float arrFloat[10] = { 2.3,6.3,12.1,7.1,9.9,3.0,18,2,1.224,0 };
+	for (int i = 0; i < 10; i++)
+	{
+	cout << "arrFloat [" << i << "] | значение: " << arrFloat[i] << endl;
+	}
+
+	cout << "\n\n[+] Массив DOUBLE:\n";
+	double arrDouble[10] = { 213,6.1123,1.1,7,9,3,18,2.0,6.3,0 };
+	for (int i = 0; i < 10; i++)
+	{
+	cout << "arrDouble [" << i << "] | значение: " << arrDouble[i] << endl;
+	}
+
+	cout << "\n\n[+] Массив CHAR:\n";
+	char arrChar[10] = { '!','@',';','$','%','^', '&', '*', 'x', '1', };
+	for (int i = 0; i < 10; i++)
+	{
+	cout << "arrChar [" << i << "] | значение: " << arrChar[i] << endl;
+	}
+
+	cout << "\n\n[+] Массив BOOL:\n";
+	bool arrBool[10] = { true,false,true,false,true,false,true,false };
+	for (int i = 0; i < 10; i++)
+	{
+	cout << "arrBool [" << i << "] | значение: " << arrBool[i] << endl;
+	}
+
+	cout << "\n\n[+] Массив STRING:\n";
+	string arrString[10] = { "ru","a", "dlyy", "кu", "ss", "moskva", "dl", "sk", "vix", "i" };
+	for (int i = 0; i < 10; i++)
+	{
+	cout << "arrString [" << i << "] | значение: " << arrString[i] << endl;
+	}
+
+
+
+
+
+
+	int _;
+	cin >> _;
+	return 0;
+}
