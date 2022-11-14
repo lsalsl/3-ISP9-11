@@ -1,0 +1,531 @@
+#include <iostream>
+using namespace std;
+
+
+
+int main()
+{
+	setlocale(0, "");
+	int a;
+	int b;
+	string month;
+	int day;
+	cout << "[+] Календарь\n\n";
+	cout << "[1] Январь\n";
+	cout << "[2] Февраль\n";
+	cout << "[3] Март\n";
+	cout << "[4] Апрель\n";
+	cout << "[5] Май\n";
+	cout << "[6] Июнь\n";
+	cout << "[7] Июль\n";
+	cout << "[8] Август\n";
+	cout << "[9] Сентябрь\n";
+	cout << "[10] Октярбь\n";
+	cout << "[11] Ноябрь\n";
+	cout << "[12] Декабрь\n\n";
+	cout << "Выберите месяц: ";
+	cin >> a;
+	switch (a)
+	{
+	case 1:
+		cout << "Введите день: ";
+		cin >> day;
+
+		switch (day) {
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+		case 6:
+		case 7:
+		case 8:
+		case 9:
+		case 10:
+		case 11:
+		case 12:
+		case 13:
+		case 14:
+		case 15:
+		case 16:
+		case 17:
+		case 18:
+		case 19:
+		case 20:
+		case 21:
+		case 22:
+		case 23:
+		case 24:
+		case 25:
+		case 26:
+		case 27:
+		case 28:
+		case 29:
+		case 30:
+		case 31:
+			cout << "Календарь: " << day << " января." << endl;
+			break;
+		}
+
+		break;
+
+	case 2:
+		cout << "Введите день: ";
+		cin >> day;
+
+		switch (day) {
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+		case 6:
+		case 7:
+		case 8:
+		case 9:
+		case 10:
+		case 11:
+		case 12:
+		case 13:
+		case 14:
+		case 15:
+		case 16:
+		case 17:
+		case 18:
+		case 19:
+		case 20:
+		case 21:
+		case 22:
+		case 23:
+		case 24:
+		case 25:
+		case 26:
+		case 27:
+		case 28:
+		case 29:
+		cout << "Календарь: " << day << " февраля." << endl;
+		break;
+		}
+
+		break;
+
+	case 3:
+		cout << "Введите день: ";
+		cin >> day;
+
+		switch (day) {
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+		case 6:
+		case 7:
+		case 8:
+		case 9:
+		case 10:
+		case 11:
+		case 12:
+		case 13:
+		case 14:
+		case 15:
+		case 16:
+		case 17:
+		case 18:
+		case 19:
+		case 20:
+		case 21:
+		case 22:
+		case 23:
+		case 24:
+		case 25:
+		case 26:
+		case 27:
+		case 28:
+		case 29:
+		case 30:
+		case 31:
+			cout << "Календарь: " << day << " марта." << endl;
+			break;
+		}
+
+		break;
+
+	case 4:
+		cout << "Введите день: ";
+		cin >> day;
+
+		switch (day) {
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+		case 6:
+		case 7:
+		case 8:
+		case 9:
+		case 10:
+		case 11:
+		case 12:
+		case 13:
+		case 14:
+		case 15:
+		case 16:
+		case 17:
+		case 18:
+		case 19:
+		case 20:
+		case 21:
+		case 22:
+		case 23:
+		case 24:
+		case 25:
+		case 26:
+		case 27:
+		case 28:
+		case 29:
+		case 30:
+			cout << "Календарь: " << day << " апреля." << endl;
+			break;
+		}
+
+		break;
+
+	case 5:
+		cout << "Введите день: ";
+		cin >> day;
+
+		switch (day) {
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+		case 6:
+		case 7:
+		case 8:
+		case 9:
+		case 10:
+		case 11:
+		case 12:
+		case 13:
+		case 14:
+		case 15:
+		case 16:
+		case 17:
+		case 18:
+		case 19:
+		case 20:
+		case 21:
+		case 22:
+		case 23:
+		case 24:
+		case 25:
+		case 26:
+		case 27:
+		case 28:
+		case 29:
+		case 30:
+		case 31:
+			cout << "Календарь: " << day << " мая." << endl;
+			break;
+		}
+
+		break;
+
+	case 6:
+		cout << "Введите день: ";
+		cin >> day;
+
+		switch (day) {
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+		case 6:
+		case 7:
+		case 8:
+		case 9:
+		case 10:
+		case 11:
+		case 12:
+		case 13:
+		case 14:
+		case 15:
+		case 16:
+		case 17:
+		case 18:
+		case 19:
+		case 20:
+		case 21:
+		case 22:
+		case 23:
+		case 24:
+		case 25:
+		case 26:
+		case 27:
+		case 28:
+		case 29:
+		case 30:
+			cout << "Календарь: " << day << " июня." << endl;
+			break;
+		}
+
+		break;
+
+	case 7:
+		cout << "Введите день: ";
+		cin >> day;
+
+		switch (day) {
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+		case 6:
+		case 7:
+		case 8:
+		case 9:
+		case 10:
+		case 11:
+		case 12:
+		case 13:
+		case 14:
+		case 15:
+		case 16:
+		case 17:
+		case 18:
+		case 19:
+		case 20:
+		case 21:
+		case 22:
+		case 23:
+		case 24:
+		case 25:
+		case 26:
+		case 27:
+		case 28:
+		case 29:
+		case 30:
+		cout << "Календарь: " << day << " июля." << endl;
+		break;
+		}
+
+		break;
+
+	case 8:
+		cout << "Введите день: ";
+		cin >> day;
+
+		switch (day) {
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+		case 6:
+		case 7:
+		case 8:
+		case 9:
+		case 10:
+		case 11:
+		case 12:
+		case 13:
+		case 14:
+		case 15:
+		case 16:
+		case 17:
+		case 18:
+		case 19:
+		case 20:
+		case 21:
+		case 22:
+		case 23:
+		case 24:
+		case 25:
+		case 26:
+		case 27:
+		case 28:
+		case 29:
+		case 30:
+		case 31:
+			cout << "Календарь: " << day << " августа." << endl;
+			break;
+		}
+
+		break;
+
+	case 9:
+		cout << "Введите день: ";
+		cin >> day;
+
+		switch (day) {
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+		case 6:
+		case 7:
+		case 8:
+		case 9:
+		case 10:
+		case 11:
+		case 12:
+		case 13:
+		case 14:
+		case 15:
+		case 16:
+		case 17:
+		case 18:
+		case 19:
+		case 20:
+		case 21:
+		case 22:
+		case 23:
+		case 24:
+		case 25:
+		case 26:
+		case 27:
+		case 28:
+		case 29:
+		case 30:
+			cout << "Календарь: " << day << " сентября." << endl;
+		break;
+		}
+
+		break;
+
+	case 10:
+		cout << "Введите день: ";
+		cin >> day;
+
+		switch (day) {
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+		case 6:
+		case 7:
+		case 8:
+		case 9:
+		case 10:
+		case 11:
+		case 12:
+		case 13:
+		case 14:
+		case 15:
+		case 16:
+		case 17:
+		case 18:
+		case 19:
+		case 20:
+		case 21:
+		case 22:
+		case 23:
+		case 24:
+		case 25:
+		case 26:
+		case 27:
+		case 28:
+		case 29:
+		case 30:
+		case 31:
+			cout << "Календарь: " << day << " октября." << endl;
+			break;
+		}
+
+		break;
+
+	case 11:
+		cout << "Введите день: ";
+		cin >> day;
+
+		switch (day) {
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+		case 6:
+		case 7:
+		case 8:
+		case 9:
+		case 10:
+		case 11:
+		case 12:
+		case 13:
+		case 14:
+		case 15:
+		case 16:
+		case 17:
+		case 18:
+		case 19:
+		case 20:
+		case 21:
+		case 22:
+		case 23:
+		case 24:
+		case 25:
+		case 26:
+		case 27:
+		case 28:
+		case 29:
+		case 30:
+			cout << "Календарь: " << day << " ноября." << endl;
+		break;
+		}
+
+		break;
+
+	case 12:
+		cout << "Введите день: ";
+		cin >> day;
+
+		switch (day) {
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+		case 6:
+		case 7:
+		case 8:
+		case 9:
+		case 10:
+		case 11:
+		case 12:
+		case 13:
+		case 14:
+		case 15:
+		case 16:
+		case 17:
+		case 18:
+		case 19:
+		case 20:
+		case 21:
+		case 22:
+		case 23:
+		case 24:
+		case 25:
+		case 26:
+		case 27:
+		case 28:
+		case 29:
+		case 30:
+		case 31:
+			cout << "Календарь: " << day << " декабря." << endl;
+			break;
+		}
+
+		break;
+
+	default:
+		cout << "Не правильно выбран месяц!";
+		break;
+	}
+}
