@@ -1,0 +1,184 @@
+#include <iostream>
+using namespace std;
+int main() {
+	setlocale(0, "");
+	int menu;
+	int slovo;
+	cout << "[+]Переводчик\n\n";
+	cout << "[1] Русские слова\n";
+	cout << "[2] Английские слова\n\n";
+	cout << "[3] Выйти\n";
+	cout << "[+] Выбрать: ";
+	cin >> menu;
+	switch (menu)
+	{
+	case 1:
+		cout << "[1] Арбуз\n";
+		cout << "[2] Балалайка\n";
+		cout << "[3] Владимир\n";
+		cout << "[4] Город\n";
+		cout << "[5] Дорога\n";
+		cout << "[6] Железо\n";
+		cout << "[7] Зубр\n";
+		cout << "[8] Ирис\n";
+		cout << "[9] Йогурт\n";
+		cout << "[10] Курица\n";
+		cout << "[11] Лимон\n";
+		cout << "[12] Матвей\n";
+		cout << "[13] Номер\n";
+		cout << "[14] Оскар\n";
+		cout << "[15] Петр\n";
+		cout << "Выберите слово: ";
+		cin >> slovo;
+		switch (slovo)
+		{
+		case 1:
+			system("cls");
+			cout << "Перевод: Арбуз --> Watermelon";
+			break;
+		case 2:
+			system("cls");
+			cout << "Перевод: Балалайка --> balalaika";
+			break;
+		case 3:
+			system("cls");
+			cout << "Перевод: Владимир --> Vladimir";
+		case 4:
+			system("cls");
+			cout << "Перевод: Город --> City";
+			break;
+		case 5:
+			system("cls");
+			cout << "Перевод: Дорога --> Road";
+			break;
+		case 6:
+			system("cls");
+			cout << "Перевод: Железо --> Iron";
+			break;
+		case 7:
+			system("cls");
+			cout << "Перевод: Зубр --> Bison";
+			break;
+		case 8:
+			system("cls");
+			cout << "Перевод: Ирис --> Iris";
+			break;
+		case 9:
+			system("cls");
+			cout << "Перевод: Йогурт --> Yogurt";
+			break;
+		case 10:
+			system("cls");
+			cout << "Перевод: Курица --> Chicken";
+			break;
+		case 11:
+			system("cls");
+			cout << "Перевод: Лимон --> Lemon";
+			break;
+		case 12:
+			system("cls");
+			cout << "Перевод: Матвей --> Matvey";
+			break;
+		case 13:
+			system("cls");
+			cout << "Перевод: Номер --> Number";
+			break;
+		case 14:
+			system("cls");
+			cout << "Перевод: Оскар --> Oscar";
+			break;
+		case 15:
+			system("cls");
+			cout << "Перевод: Петр --> Petr";
+			break;
+		}
+
+	case 2:
+
+		cout << "[1]  Watermelon\n";
+		cout << "[2]  balalaika\n";
+		cout << "[3]  Vladimir\n";
+		cout << "[4]  City\n";
+		cout << "[5]  Road\n";
+		cout << "[6]  Iron\n";
+		cout << "[7]  Bison\n";
+		cout << "[8]  Iris\n";
+		cout << "[9]  Yogurt\n";
+		cout << "[10]  Chicken\n";
+		cout << "[11]  Lemon\n";
+		cout << "[12]  Matvey\n";
+		cout << "[13]  Number\n";
+		cout << "[14]  Oscar\n";
+		cout << "[15]  Petr\n";
+		cin >> slovo;
+		switch (slovo)
+		{
+		case 1:
+			system("cls");
+			cout << "Перевод: Арбуз --> Watermelon";
+			break;
+		case 2:
+			system("cls");
+			cout << "Перевод: Балалайка --> balalaika";
+			break;
+		case 3:
+			system("cls");
+			cout << "Перевод: Владимир --> Vladimir";
+			break;
+		case 4:
+			system("cls");
+			cout << "Перевод: Город --> City";
+			break;
+		case 5:
+			system("cls");
+			cout << "Перевод: Дорога --> Road";
+			break;
+		case 6:
+			system("cls");
+			cout << "Перевод: Железо --> Iron";
+			break;
+		case 7:
+			system("cls");
+			cout << "Перевод: Зубр --> Bison";
+			break;
+		case 8:
+			system("cls");
+			cout << "Перевод: Ирис --> Iris";
+			break;
+		case 9:
+			system("cls");
+			cout << "Перевод: Йогурт --> Yogurt";
+			break;
+		case 10:
+			system("cls");
+			cout << "Перевод: Курица --> Chicken";
+			break;
+		case 11:
+			system("cls");
+			cout << "Перевод: Лимон --> Lemon";
+			break;
+		case 12:
+			system("cls");
+			cout << "Перевод: Матвей --> Matvey";
+			break;
+		case 13:
+			system("cls");
+			cout << "Перевод: Номер --> Number";
+			break;
+		case 14:
+			system("cls");
+			cout << "Перевод:  Оскар --> Oscar";
+			break;
+		case 15:
+			system("cls");
+			cout << "Перевод: Петр --> Petr";
+			break;
+		}
+		break;
+	case 3:
+		break;
+
+
+	}
+	return 0;
+}
