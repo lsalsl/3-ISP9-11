@@ -8,29 +8,29 @@ int main() {
 	while (true)
 	{
 		system("cls");
-		cout << "Âàøå èìÿ: " << name << "\n";
-		cout << "[1] Íà÷àòü èãðó\n";
-		cout << "[2] Íàñòðîéêè\n";
-		cout << "[3] Ïðàâèëà\n";
-		cout << "[4] Âûõîä\n\n";
-		cout << "[+] Âûáðàòü: ";
+		cout << "Ð’Ð°ÑˆÐµ Ð¸Ð¼Ñ: " << name << "\n";
+		cout << "[1] ÐÐ°Ñ‡Ð°Ñ‚ÑŒ Ð¸Ð³Ñ€Ñƒ\n";
+		cout << "[2] ÐÐ°ÑÑ‚Ñ€Ð¾Ð¹ÐºÐ¸\n";
+		cout << "[3] ÐŸÑ€Ð°Ð²Ð¸Ð»Ð°\n";
+		cout << "[4] Ð’Ñ‹Ñ…Ð¾Ð´\n\n";
+		cout << "[+] Ð’Ñ‹Ð±Ñ€Ð°Ñ‚ÑŒ: ";
 
 		short score = 0;
 		short health = 3;
 		string menu;
 		short exit;
-		string question1 = "Ëîãè÷åêñèé òèï äàííûé";
-		string question2 = "Êàêîé ðàçìåð ÿ÷åéêè âûäåëÿåòñÿ äëÿ int";
-		string question3 = "Íà êàêîì ÿçûêå ýòà ïðîãðàììà";
-		string question4 = "Ñèìâîëüíûé òèï äàííûõ";
-		string question5 = "Êàêîé ðàçìåð ÿ÷åéêè âûäåëÿåòñÿ äëÿ double";
-		string question6 = "Îïåðàòîð ïðèñâàèâàíèÿ";
-		string question7 = "Êàêîé ðàçìåð ÿ÷åéêè âûäåëÿåòñÿ äëÿ short";
-		string question8 = "Ïðàâèëüíàÿ èíèöèàëèçàöèÿ";
-		string question9 = "Êàêîé ðàçìåð ÿ÷åéêè âûäåëÿåòñÿ äëÿ long";
-		string question10 = "Êîìàíäà äëÿ ââîäà";
-		string question11 = "Êàêîé ðàçìåð ÿ÷åéêè âûäåëÿåòñÿ äëÿ char";
-		string question12 = "Êîìàíäà äëÿ Âûâîäà";
+		string question1 = "Ð›Ð¾Ð³Ð¸Ñ‡ÐµÐºÑÐ¸Ð¹ Ñ‚Ð¸Ð¿ Ð´Ð°Ð½Ð½Ñ‹Ð¹";
+		string question2 = "ÐšÐ°ÐºÐ¾Ð¹ Ñ€Ð°Ð·Ð¼ÐµÑ€ ÑÑ‡ÐµÐ¹ÐºÐ¸ Ð²Ñ‹Ð´ÐµÐ»ÑÐµÑ‚ÑÑ Ð´Ð»Ñ int";
+		string question3 = "ÐÐ° ÐºÐ°ÐºÐ¾Ð¼ ÑÐ·Ñ‹ÐºÐµ ÑÑ‚Ð° Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ð°";
+		string question4 = "Ð¡Ð¸Ð¼Ð²Ð¾Ð»ÑŒÐ½Ñ‹Ð¹ Ñ‚Ð¸Ð¿ Ð´Ð°Ð½Ð½Ñ‹Ñ…";
+		string question5 = "ÐšÐ°ÐºÐ¾Ð¹ Ñ€Ð°Ð·Ð¼ÐµÑ€ ÑÑ‡ÐµÐ¹ÐºÐ¸ Ð²Ñ‹Ð´ÐµÐ»ÑÐµÑ‚ÑÑ Ð´Ð»Ñ double";
+		string question6 = "ÐžÐ¿ÐµÑ€Ð°Ñ‚Ð¾Ñ€ Ð¿Ñ€Ð¸ÑÐ²Ð°Ð¸Ð²Ð°Ð½Ð¸Ñ";
+		string question7 = "ÐšÐ°ÐºÐ¾Ð¹ Ñ€Ð°Ð·Ð¼ÐµÑ€ ÑÑ‡ÐµÐ¹ÐºÐ¸ Ð²Ñ‹Ð´ÐµÐ»ÑÐµÑ‚ÑÑ Ð´Ð»Ñ short";
+		string question8 = "ÐŸÑ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ð°Ñ Ð¸Ð½Ð¸Ñ†Ð¸Ð°Ð»Ð¸Ð·Ð°Ñ†Ð¸Ñ";
+		string question9 = "ÐšÐ°ÐºÐ¾Ð¹ Ñ€Ð°Ð·Ð¼ÐµÑ€ ÑÑ‡ÐµÐ¹ÐºÐ¸ Ð²Ñ‹Ð´ÐµÐ»ÑÐµÑ‚ÑÑ Ð´Ð»Ñ long";
+		string question10 = "ÐšÐ¾Ð¼Ð°Ð½Ð´Ð° Ð´Ð»Ñ Ð²Ð²Ð¾Ð´Ð°";
+		string question11 = "ÐšÐ°ÐºÐ¾Ð¹ Ñ€Ð°Ð·Ð¼ÐµÑ€ ÑÑ‡ÐµÐ¹ÐºÐ¸ Ð²Ñ‹Ð´ÐµÐ»ÑÐµÑ‚ÑÑ Ð´Ð»Ñ char";
+		string question12 = "ÐšÐ¾Ð¼Ð°Ð½Ð´Ð° Ð´Ð»Ñ Ð’Ñ‹Ð²Ð¾Ð´Ð°";
 
 		cin >> menu;
 		if (menu == "1")
@@ -39,8 +39,8 @@ int main() {
 			{
 				int asd;
 				system("cls");
-				cout << "Ââåäèòå èìÿ è êîëè÷åñòâî âîïðîñîâ â íàñòðîéêàõ\n";
-				cout << "[1] Âûéòè\n";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Ñ Ð¸ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð²Ð¾Ð¿Ñ€Ð¾ÑÐ¾Ð² Ð² Ð½Ð°ÑÑ‚Ñ€Ð¾Ð¹ÐºÐ°Ñ…\n";
+				cout << "[1] Ð’Ñ‹Ð¹Ñ‚Ð¸\n";
 				cin >> asd;
 				if (asd == 1)
 				{
@@ -53,15 +53,15 @@ int main() {
 				{
 					system("cls");
 					int answer1;
-					cout << "Âàøå èìÿ: " << name << endl;
-					cout << "Î÷êè: " << score << endl;
-					cout << "Âàøè æèçíè: " << health << endl;
+					cout << "Ð’Ð°ÑˆÐµ Ð¸Ð¼Ñ: " << name << endl;
+					cout << "ÐžÑ‡ÐºÐ¸: " << score << endl;
+					cout << "Ð’Ð°ÑˆÐ¸ Ð¶Ð¸Ð·Ð½Ð¸: " << health << endl;
 					cout << question1 << endl;
-					cout << "Âàðèàíòû îòâåòîâ: \n";
+					cout << "Ð’Ð°Ñ€Ð¸Ð°Ð½Ñ‚Ñ‹ Ð¾Ñ‚Ð²ÐµÑ‚Ð¾Ð²: \n";
 					cout << "[1] bool\n";
 					cout << "[2] int\n";
 					cout << "[3] char\n\n";
-					cout << "Âàø îòâåò: ";
+					cout << "Ð’Ð°Ñˆ Ð¾Ñ‚Ð²ÐµÑ‚: ";
 					cin >> answer1;
 					if (answer1 == 1)
 					{
@@ -74,9 +74,9 @@ int main() {
 					if (health < 1)
 					{
 						system("cls");
-						cout << "Âû ïðîèãðàëè! " << "Âàøè î÷êè: " << score << endl;
-						cout << "[1] Âûéòè\n";
-						cout << "Âûáðàòü:";
+						cout << "Ð’Ñ‹ Ð¿Ñ€Ð¾Ð¸Ð³Ñ€Ð°Ð»Ð¸! " << "Ð’Ð°ÑˆÐ¸ Ð¾Ñ‡ÐºÐ¸: " << score << endl;
+						cout << "[1] Ð’Ñ‹Ð¹Ñ‚Ð¸\n";
+						cout << "Ð’Ñ‹Ð±Ñ€Ð°Ñ‚ÑŒ:";
 						cin >> usless;
 						if (usless == 1)
 						{
@@ -92,15 +92,15 @@ int main() {
 					{
 						system("cls");
 						int answer2;
-						cout << "Âàøå èìÿ: " << name << endl;
-						cout << "Î÷êè: " << score << endl;
-						cout << "Âàøè æèçíè: " << health << endl;
+						cout << "Ð’Ð°ÑˆÐµ Ð¸Ð¼Ñ: " << name << endl;
+						cout << "ÐžÑ‡ÐºÐ¸: " << score << endl;
+						cout << "Ð’Ð°ÑˆÐ¸ Ð¶Ð¸Ð·Ð½Ð¸: " << health << endl;
 						cout << question2 << endl;
-						cout << "Âàðèàíòû îòâåòîâ: \n";
+						cout << "Ð’Ð°Ñ€Ð¸Ð°Ð½Ñ‚Ñ‹ Ð¾Ñ‚Ð²ÐµÑ‚Ð¾Ð²: \n";
 						cout << "[1] 1b\n";
 						cout << "[2] 4b\n";
 						cout << "[3] 8b\n\n";
-						cout << "Âàø îòâåò: ";
+						cout << "Ð’Ð°Ñˆ Ð¾Ñ‚Ð²ÐµÑ‚: ";
 						cin >> answer2;
 						if (answer2 == 2)
 						{
@@ -113,15 +113,15 @@ int main() {
 					}
 					system("cls");
 					int answer3;
-					cout << "Âàøå èìÿ: " << name << endl;
-					cout << "Î÷êè: " << score << endl;
-					cout << "Âàøè æèçíè: " << health << endl;
+					cout << "Ð’Ð°ÑˆÐµ Ð¸Ð¼Ñ: " << name << endl;
+					cout << "ÐžÑ‡ÐºÐ¸: " << score << endl;
+					cout << "Ð’Ð°ÑˆÐ¸ Ð¶Ð¸Ð·Ð½Ð¸: " << health << endl;
 					cout << question3 << endl;
-					cout << "Âàðèàíòû îòâåòîâ: \n";
+					cout << "Ð’Ð°Ñ€Ð¸Ð°Ð½Ñ‚Ñ‹ Ð¾Ñ‚Ð²ÐµÑ‚Ð¾Ð²: \n";
 					cout << "[1] Pascal\n";
 					cout << "[2] Python\n";
 					cout << "[3] C++\n\n";
-					cout << "Âàø îòâåò: ";
+					cout << "Ð’Ð°Ñˆ Ð¾Ñ‚Ð²ÐµÑ‚: ";
 					cin >> answer3;
 
 					if (answer3 == 3)
@@ -135,9 +135,9 @@ int main() {
 					if (health < 1)
 					{
 						system("cls");
-						cout << "Âû ïðîèãðàëè! " << "Âàøè î÷êè: " << score << endl;
-						cout << "[1] Âûéòè\n";
-						cout << "Âûáðàòü:";
+						cout << "Ð’Ñ‹ Ð¿Ñ€Ð¾Ð¸Ð³Ñ€Ð°Ð»Ð¸! " << "Ð’Ð°ÑˆÐ¸ Ð¾Ñ‡ÐºÐ¸: " << score << endl;
+						cout << "[1] Ð’Ñ‹Ð¹Ñ‚Ð¸\n";
+						cout << "Ð’Ñ‹Ð±Ñ€Ð°Ñ‚ÑŒ:";
 						cin >> usless;
 						if (usless == 1)
 						{
@@ -153,15 +153,15 @@ int main() {
 					{
 						system("cls");
 						int answer4;
-						cout << "Âàøå èìÿ: " << name << endl;
-						cout << "Î÷êè: " << score << endl;
-						cout << "Âàøè æèçíè: " << health << endl;
+						cout << "Ð’Ð°ÑˆÐµ Ð¸Ð¼Ñ: " << name << endl;
+						cout << "ÐžÑ‡ÐºÐ¸: " << score << endl;
+						cout << "Ð’Ð°ÑˆÐ¸ Ð¶Ð¸Ð·Ð½Ð¸: " << health << endl;
 						cout << question4 << endl;
-						cout << "Âàðèàíòû îòâåòîâ: \n";
+						cout << "Ð’Ð°Ñ€Ð¸Ð°Ð½Ñ‚Ñ‹ Ð¾Ñ‚Ð²ÐµÑ‚Ð¾Ð²: \n";
 						cout << "[1] char\n";
 						cout << "[2] double\n";
 						cout << "[3] short\n\n";
-						cout << "Âàø îòâåò: ";
+						cout << "Ð’Ð°Ñˆ Ð¾Ñ‚Ð²ÐµÑ‚: ";
 						cin >> answer4;
 						if (answer4 == 1)
 						{
@@ -175,9 +175,9 @@ int main() {
 					if (health < 1)
 					{
 						system("cls");
-						cout << "Âû ïðîèãðàëè! " << "Âàøè î÷êè: " << score << endl;
-						cout << "[1] Âûéòè\n";
-						cout << "Âûáðàòü:";
+						cout << "Ð’Ñ‹ Ð¿Ñ€Ð¾Ð¸Ð³Ñ€Ð°Ð»Ð¸! " << "Ð’Ð°ÑˆÐ¸ Ð¾Ñ‡ÐºÐ¸: " << score << endl;
+						cout << "[1] Ð’Ñ‹Ð¹Ñ‚Ð¸\n";
+						cout << "Ð’Ñ‹Ð±Ñ€Ð°Ñ‚ÑŒ:";
 						cin >> usless;
 						if (usless == 1)
 						{
@@ -193,15 +193,15 @@ int main() {
 					{
 						system("cls");
 						int answer5;
-						cout << "Âàøå èìÿ: " << name << endl;
-						cout << "Î÷êè: " << score << endl;
-						cout << "Âàøè æèçíè: " << health << endl;
+						cout << "Ð’Ð°ÑˆÐµ Ð¸Ð¼Ñ: " << name << endl;
+						cout << "ÐžÑ‡ÐºÐ¸: " << score << endl;
+						cout << "Ð’Ð°ÑˆÐ¸ Ð¶Ð¸Ð·Ð½Ð¸: " << health << endl;
 						cout << question5 << endl;
-						cout << "Âàðèàíòû îòâåòîâ: \n";
+						cout << "Ð’Ð°Ñ€Ð¸Ð°Ð½Ñ‚Ñ‹ Ð¾Ñ‚Ð²ÐµÑ‚Ð¾Ð²: \n";
 						cout << "[1] 4b\n";
 						cout << "[2] 8b\n";
 						cout << "[3] 16b\n\n";
-						cout << "Âàø îòâåò: ";
+						cout << "Ð’Ð°Ñˆ Ð¾Ñ‚Ð²ÐµÑ‚: ";
 						cin >> answer5;
 						if (answer5 == 2)
 						{
@@ -215,9 +215,9 @@ int main() {
 					if (health < 1)
 					{
 						system("cls");
-						cout << "Âû ïðîèãðàëè! " << "Âàøè î÷êè: " << score << endl;
-						cout << "[1] Âûéòè\n";
-						cout << "Âûáðàòü:";
+						cout << "Ð’Ñ‹ Ð¿Ñ€Ð¾Ð¸Ð³Ñ€Ð°Ð»Ð¸! " << "Ð’Ð°ÑˆÐ¸ Ð¾Ñ‡ÐºÐ¸: " << score << endl;
+						cout << "[1] Ð’Ñ‹Ð¹Ñ‚Ð¸\n";
+						cout << "Ð’Ñ‹Ð±Ñ€Ð°Ñ‚ÑŒ:";
 						cin >> usless;
 						if (usless == 1)
 						{
@@ -232,8 +232,8 @@ int main() {
 					else
 					{
 						int n;
-						cout << "Âû ïîáåäèëè! Ó âàñ: " << score << " î÷êîâ\n";
-						cout << "[1] Âûéòè â ìåíþ";
+						cout << "Ð’Ñ‹ Ð¿Ð¾Ð±ÐµÐ´Ð¸Ð»Ð¸! Ð£ Ð²Ð°Ñ: " << score << " Ð¾Ñ‡ÐºÐ¾Ð²\n";
+						cout << "[1] Ð’Ñ‹Ð¹Ñ‚Ð¸ Ð² Ð¼ÐµÐ½ÑŽ";
 						cin >> n;
 						if (n == 1)
 						{
@@ -250,15 +250,15 @@ int main() {
 				{
 					system("cls");
 					int answer1;
-					cout << "Âàøå èìÿ: " << name << endl;
-					cout << "Î÷êè: " << score << endl;
-					cout << "Âàøè æèçíè: " << health << endl;
+					cout << "Ð’Ð°ÑˆÐµ Ð¸Ð¼Ñ: " << name << endl;
+					cout << "ÐžÑ‡ÐºÐ¸: " << score << endl;
+					cout << "Ð’Ð°ÑˆÐ¸ Ð¶Ð¸Ð·Ð½Ð¸: " << health << endl;
 					cout << question1 << endl;
-					cout << "Âàðèàíòû îòâåòîâ: \n";
+					cout << "Ð’Ð°Ñ€Ð¸Ð°Ð½Ñ‚Ñ‹ Ð¾Ñ‚Ð²ÐµÑ‚Ð¾Ð²: \n";
 					cout << "[1] bool\n";
 					cout << "[2] int\n";
 					cout << "[3] char\n\n";
-					cout << "Âàø îòâåò: ";
+					cout << "Ð’Ð°Ñˆ Ð¾Ñ‚Ð²ÐµÑ‚: ";
 					cin >> answer1;
 					if (answer1 == 1)
 					{
@@ -270,15 +270,15 @@ int main() {
 					}
 					system("cls");
 					int answer2;
-					cout << "Âàøå èìÿ: " << name << endl;
-					cout << "Î÷êè: " << score << endl;
-					cout << "Âàøè æèçíè: " << health << endl;
+					cout << "Ð’Ð°ÑˆÐµ Ð¸Ð¼Ñ: " << name << endl;
+					cout << "ÐžÑ‡ÐºÐ¸: " << score << endl;
+					cout << "Ð’Ð°ÑˆÐ¸ Ð¶Ð¸Ð·Ð½Ð¸: " << health << endl;
 					cout << question2 << endl;
-					cout << "Âàðèàíòû îòâåòîâ: \n";
+					cout << "Ð’Ð°Ñ€Ð¸Ð°Ð½Ñ‚Ñ‹ Ð¾Ñ‚Ð²ÐµÑ‚Ð¾Ð²: \n";
 					cout << "[1] 1b\n";
 					cout << "[2] 4b\n";
 					cout << "[3] 8b\n\n";
-					cout << "Âàø îòâåò: ";
+					cout << "Ð’Ð°Ñˆ Ð¾Ñ‚Ð²ÐµÑ‚: ";
 					cin >> answer2;
 					if (answer2 == 2)
 					{
@@ -290,15 +290,15 @@ int main() {
 					}
 					system("cls");
 					int answer3;
-					cout << "Âàøå èìÿ: " << name << endl;
-					cout << "Î÷êè: " << score << endl;
-					cout << "Âàøè æèçíè: " << health << endl;
+					cout << "Ð’Ð°ÑˆÐµ Ð¸Ð¼Ñ: " << name << endl;
+					cout << "ÐžÑ‡ÐºÐ¸: " << score << endl;
+					cout << "Ð’Ð°ÑˆÐ¸ Ð¶Ð¸Ð·Ð½Ð¸: " << health << endl;
 					cout << question3 << endl;
-					cout << "Âàðèàíòû îòâåòîâ: \n";
+					cout << "Ð’Ð°Ñ€Ð¸Ð°Ð½Ñ‚Ñ‹ Ð¾Ñ‚Ð²ÐµÑ‚Ð¾Ð²: \n";
 					cout << "[1] Pascal\n";
 					cout << "[2] Python\n";
 					cout << "[3] C++\n\n";
-					cout << "Âàø îòâåò: ";
+					cout << "Ð’Ð°Ñˆ Ð¾Ñ‚Ð²ÐµÑ‚: ";
 					cin >> answer3;
 
 					if (answer3 == 3)
@@ -312,9 +312,9 @@ int main() {
 					if (health < 1)
 					{
 						system("cls");
-						cout << "Âû ïðîèãðàëè! " << "Âàøè î÷êè: " << score << endl;
-						cout << "[1] Âûéòè\n";
-						cout << "Âûáðàòü:";
+						cout << "Ð’Ñ‹ Ð¿Ñ€Ð¾Ð¸Ð³Ñ€Ð°Ð»Ð¸! " << "Ð’Ð°ÑˆÐ¸ Ð¾Ñ‡ÐºÐ¸: " << score << endl;
+						cout << "[1] Ð’Ñ‹Ð¹Ñ‚Ð¸\n";
+						cout << "Ð’Ñ‹Ð±Ñ€Ð°Ñ‚ÑŒ:";
 						cin >> usless;
 						if (usless == 1)
 						{
@@ -330,15 +330,15 @@ int main() {
 					{
 						system("cls");
 						int answer4;
-						cout << "Âàøå èìÿ: " << name << endl;
-						cout << "Î÷êè: " << score << endl;
-						cout << "Âàøè æèçíè: " << health << endl;
+						cout << "Ð’Ð°ÑˆÐµ Ð¸Ð¼Ñ: " << name << endl;
+						cout << "ÐžÑ‡ÐºÐ¸: " << score << endl;
+						cout << "Ð’Ð°ÑˆÐ¸ Ð¶Ð¸Ð·Ð½Ð¸: " << health << endl;
 						cout << question4 << endl;
-						cout << "Âàðèàíòû îòâåòîâ: \n";
+						cout << "Ð’Ð°Ñ€Ð¸Ð°Ð½Ñ‚Ñ‹ Ð¾Ñ‚Ð²ÐµÑ‚Ð¾Ð²: \n";
 						cout << "[1] char\n";
 						cout << "[2] double\n";
 						cout << "[3] short\n\n";
-						cout << "Âàø îòâåò: ";
+						cout << "Ð’Ð°Ñˆ Ð¾Ñ‚Ð²ÐµÑ‚: ";
 						cin >> answer4;
 						if (answer4 == 1)
 						{
@@ -352,9 +352,9 @@ int main() {
 					if (health < 1)
 					{
 						system("cls");
-						cout << "Âû ïðîèãðàëè! " << "Âàøè î÷êè: " << score << endl;
-						cout << "[1] Âûéòè\n";
-						cout << "Âûáðàòü:";
+						cout << "Ð’Ñ‹ Ð¿Ñ€Ð¾Ð¸Ð³Ñ€Ð°Ð»Ð¸! " << "Ð’Ð°ÑˆÐ¸ Ð¾Ñ‡ÐºÐ¸: " << score << endl;
+						cout << "[1] Ð’Ñ‹Ð¹Ñ‚Ð¸\n";
+						cout << "Ð’Ñ‹Ð±Ñ€Ð°Ñ‚ÑŒ:";
 						cin >> usless;
 						if (usless == 1)
 						{
@@ -370,15 +370,15 @@ int main() {
 					{
 						system("cls");
 						int answer5;
-						cout << "Âàøå èìÿ: " << name << endl;
-						cout << "Î÷êè: " << score << endl;
-						cout << "Âàøè æèçíè: " << health << endl;
+						cout << "Ð’Ð°ÑˆÐµ Ð¸Ð¼Ñ: " << name << endl;
+						cout << "ÐžÑ‡ÐºÐ¸: " << score << endl;
+						cout << "Ð’Ð°ÑˆÐ¸ Ð¶Ð¸Ð·Ð½Ð¸: " << health << endl;
 						cout << question5 << endl;
-						cout << "Âàðèàíòû îòâåòîâ: \n";
+						cout << "Ð’Ð°Ñ€Ð¸Ð°Ð½Ñ‚Ñ‹ Ð¾Ñ‚Ð²ÐµÑ‚Ð¾Ð²: \n";
 						cout << "[1] 4b\n";
 						cout << "[2] 8b\n";
 						cout << "[3] 16b\n\n";
-						cout << "Âàø îòâåò: ";
+						cout << "Ð’Ð°Ñˆ Ð¾Ñ‚Ð²ÐµÑ‚: ";
 						cin >> answer5;
 						if (answer5 == 2)
 						{
@@ -392,9 +392,9 @@ int main() {
 					if (health < 1)
 					{
 						system("cls");
-						cout << "Âû ïðîèãðàëè! " << "Âàøè î÷êè: " << score << endl;
-						cout << "[1] Âûéòè\n";
-						cout << "Âûáðàòü:";
+						cout << "Ð’Ñ‹ Ð¿Ñ€Ð¾Ð¸Ð³Ñ€Ð°Ð»Ð¸! " << "Ð’Ð°ÑˆÐ¸ Ð¾Ñ‡ÐºÐ¸: " << score << endl;
+						cout << "[1] Ð’Ñ‹Ð¹Ñ‚Ð¸\n";
+						cout << "Ð’Ñ‹Ð±Ñ€Ð°Ñ‚ÑŒ:";
 						cin >> usless;
 						if (usless == 1)
 						{
@@ -410,15 +410,15 @@ int main() {
 					{
 						system("cls");
 						int answer6;
-						cout << "Âàøå èìÿ: " << name << endl;
-						cout << "Î÷êè: " << score << endl;
-						cout << "Âàøè æèçíè: " << health << endl;
+						cout << "Ð’Ð°ÑˆÐµ Ð¸Ð¼Ñ: " << name << endl;
+						cout << "ÐžÑ‡ÐºÐ¸: " << score << endl;
+						cout << "Ð’Ð°ÑˆÐ¸ Ð¶Ð¸Ð·Ð½Ð¸: " << health << endl;
 						cout << question6 << endl;
-						cout << "Âàðèàíòû îòâåòîâ: \n";
+						cout << "Ð’Ð°Ñ€Ð¸Ð°Ð½Ñ‚Ñ‹ Ð¾Ñ‚Ð²ÐµÑ‚Ð¾Ð²: \n";
 						cout << "[1] ==\n";
 						cout << "[2] -\n";
 						cout << "[3] =\n\n";
-						cout << "Âàø îòâåò: ";
+						cout << "Ð’Ð°Ñˆ Ð¾Ñ‚Ð²ÐµÑ‚: ";
 						cin >> answer6;
 						if (answer6 == 3)
 						{
@@ -432,9 +432,9 @@ int main() {
 					if (health < 1)
 					{
 						system("cls");
-						cout << "Âû ïðîèãðàëè! " << "Âàøè î÷êè: " << score << endl;
-						cout << "[1] Âûéòè\n";
-						cout << "Âûáðàòü:";
+						cout << "Ð’Ñ‹ Ð¿Ñ€Ð¾Ð¸Ð³Ñ€Ð°Ð»Ð¸! " << "Ð’Ð°ÑˆÐ¸ Ð¾Ñ‡ÐºÐ¸: " << score << endl;
+						cout << "[1] Ð’Ñ‹Ð¹Ñ‚Ð¸\n";
+						cout << "Ð’Ñ‹Ð±Ñ€Ð°Ñ‚ÑŒ:";
 						cin >> usless;
 						if (usless == 1)
 						{
@@ -450,15 +450,15 @@ int main() {
 					{
 						system("cls");
 						int answer7;
-						cout << "Âàøå èìÿ: " << name << endl;
-						cout << "Î÷êè: " << score << endl;
-						cout << "Âàøè æèçíè: " << health << endl;
+						cout << "Ð’Ð°ÑˆÐµ Ð¸Ð¼Ñ: " << name << endl;
+						cout << "ÐžÑ‡ÐºÐ¸: " << score << endl;
+						cout << "Ð’Ð°ÑˆÐ¸ Ð¶Ð¸Ð·Ð½Ð¸: " << health << endl;
 						cout << question7 << endl;
-						cout << "Âàðèàíòû îòâåòîâ: \n";
+						cout << "Ð’Ð°Ñ€Ð¸Ð°Ð½Ñ‚Ñ‹ Ð¾Ñ‚Ð²ÐµÑ‚Ð¾Ð²: \n";
 						cout << "[1] 3b\n";
 						cout << "[2] 2b\n";
 						cout << "[3] 1b\n\n";
-						cout << "Âàø îòâåò: ";
+						cout << "Ð’Ð°Ñˆ Ð¾Ñ‚Ð²ÐµÑ‚: ";
 						cin >> answer7;
 						if (answer7 == 2)
 						{
@@ -472,9 +472,9 @@ int main() {
 					if (health < 1)
 					{
 						system("cls");
-						cout << "Âû ïðîèãðàëè! " << "Âàøè î÷êè: " << score << endl;
-						cout << "[1] Âûéòè\n";
-						cout << "Âûáðàòü:";
+						cout << "Ð’Ñ‹ Ð¿Ñ€Ð¾Ð¸Ð³Ñ€Ð°Ð»Ð¸! " << "Ð’Ð°ÑˆÐ¸ Ð¾Ñ‡ÐºÐ¸: " << score << endl;
+						cout << "[1] Ð’Ñ‹Ð¹Ñ‚Ð¸\n";
+						cout << "Ð’Ñ‹Ð±Ñ€Ð°Ñ‚ÑŒ:";
 						cin >> usless;
 						if (usless == 1)
 						{
@@ -490,15 +490,15 @@ int main() {
 					{
 						system("cls");
 						int answer8;
-						cout << "Âàøå èìÿ: " << name << endl;
-						cout << "Î÷êè: " << score << endl;
-						cout << "Âàøè æèçíè: " << health << endl;
+						cout << "Ð’Ð°ÑˆÐµ Ð¸Ð¼Ñ: " << name << endl;
+						cout << "ÐžÑ‡ÐºÐ¸: " << score << endl;
+						cout << "Ð’Ð°ÑˆÐ¸ Ð¶Ð¸Ð·Ð½Ð¸: " << health << endl;
 						cout << question8 << endl;
-						cout << "Âàðèàíòû îòâåòîâ: \n";
+						cout << "Ð’Ð°Ñ€Ð¸Ð°Ð½Ñ‚Ñ‹ Ð¾Ñ‚Ð²ÐµÑ‚Ð¾Ð²: \n";
 						cout << "[1] int A = 10\n";
 						cout << "[2] A int = 10\n";
 						cout << "[3] 10 = int A\n\n";
-						cout << "Âàø îòâåò: ";
+						cout << "Ð’Ð°Ñˆ Ð¾Ñ‚Ð²ÐµÑ‚: ";
 						cin >> answer8;
 						if (answer8 == 1)
 						{
@@ -512,9 +512,9 @@ int main() {
 					if (health < 1)
 					{
 						system("cls");
-						cout << "Âû ïðîèãðàëè! " << "Âàøè î÷êè: " << score << endl;
-						cout << "[1] Âûéòè\n";
-						cout << "Âûáðàòü:";
+						cout << "Ð’Ñ‹ Ð¿Ñ€Ð¾Ð¸Ð³Ñ€Ð°Ð»Ð¸! " << "Ð’Ð°ÑˆÐ¸ Ð¾Ñ‡ÐºÐ¸: " << score << endl;
+						cout << "[1] Ð’Ñ‹Ð¹Ñ‚Ð¸\n";
+						cout << "Ð’Ñ‹Ð±Ñ€Ð°Ñ‚ÑŒ:";
 						cin >> usless;
 						if (usless == 1)
 						{
@@ -530,15 +530,15 @@ int main() {
 					{
 						system("cls");
 						int answer9;
-						cout << "Âàøå èìÿ: " << name << endl;
-						cout << "Î÷êè: " << score << endl;
-						cout << "Âàøè æèçíè: " << health << endl;
+						cout << "Ð’Ð°ÑˆÐµ Ð¸Ð¼Ñ: " << name << endl;
+						cout << "ÐžÑ‡ÐºÐ¸: " << score << endl;
+						cout << "Ð’Ð°ÑˆÐ¸ Ð¶Ð¸Ð·Ð½Ð¸: " << health << endl;
 						cout << question9 << endl;
-						cout << "Âàðèàíòû îòâåòîâ: \n";
+						cout << "Ð’Ð°Ñ€Ð¸Ð°Ð½Ñ‚Ñ‹ Ð¾Ñ‚Ð²ÐµÑ‚Ð¾Ð²: \n";
 						cout << "[1] 4b\n";
 						cout << "[2] 2b\n";
 						cout << "[3] 32b\n\n";
-						cout << "Âàø îòâåò: ";
+						cout << "Ð’Ð°Ñˆ Ð¾Ñ‚Ð²ÐµÑ‚: ";
 						cin >> answer9;
 						if (answer9 == 1)
 						{
@@ -552,9 +552,9 @@ int main() {
 					if (health < 1)
 					{
 						system("cls");
-						cout << "Âû ïðîèãðàëè! " << "Âàøè î÷êè: " << score << endl;
-						cout << "[1] Âûéòè\n";
-						cout << "Âûáðàòü:";
+						cout << "Ð’Ñ‹ Ð¿Ñ€Ð¾Ð¸Ð³Ñ€Ð°Ð»Ð¸! " << "Ð’Ð°ÑˆÐ¸ Ð¾Ñ‡ÐºÐ¸: " << score << endl;
+						cout << "[1] Ð’Ñ‹Ð¹Ñ‚Ð¸\n";
+						cout << "Ð’Ñ‹Ð±Ñ€Ð°Ñ‚ÑŒ:";
 						cin >> usless;
 						if (usless == 1)
 						{
@@ -570,15 +570,15 @@ int main() {
 					{
 						system("cls");
 						int answer10;
-						cout << "Âàøå èìÿ: " << name << endl;
-						cout << "Î÷êè: " << score << endl;
-						cout << "Âàøè æèçíè: " << health << endl;
+						cout << "Ð’Ð°ÑˆÐµ Ð¸Ð¼Ñ: " << name << endl;
+						cout << "ÐžÑ‡ÐºÐ¸: " << score << endl;
+						cout << "Ð’Ð°ÑˆÐ¸ Ð¶Ð¸Ð·Ð½Ð¸: " << health << endl;
 						cout << question10 << endl;
-						cout << "Âàðèàíòû îòâåòîâ: \n";
+						cout << "Ð’Ð°Ñ€Ð¸Ð°Ð½Ñ‚Ñ‹ Ð¾Ñ‚Ð²ÐµÑ‚Ð¾Ð²: \n";
 						cout << "[1] Cin\n";
 						cout << "[2] Cout\n";
 						cout << "[3] Endl\n\n";
-						cout << "Âàø îòâåò: ";
+						cout << "Ð’Ð°Ñˆ Ð¾Ñ‚Ð²ÐµÑ‚: ";
 						cin >> answer10;
 						if (answer10 == 1)
 						{
@@ -592,9 +592,9 @@ int main() {
 					if (health < 1)
 					{
 						system("cls");
-						cout << "Âû ïðîèãðàëè! " << "Âàøè î÷êè: " << score << endl;
-						cout << "[1] Âûéòè\n";
-						cout << "Âûáðàòü:";
+						cout << "Ð’Ñ‹ Ð¿Ñ€Ð¾Ð¸Ð³Ñ€Ð°Ð»Ð¸! " << "Ð’Ð°ÑˆÐ¸ Ð¾Ñ‡ÐºÐ¸: " << score << endl;
+						cout << "[1] Ð’Ñ‹Ð¹Ñ‚Ð¸\n";
+						cout << "Ð’Ñ‹Ð±Ñ€Ð°Ñ‚ÑŒ:";
 						cin >> usless;
 						if (usless == 1)
 						{
@@ -610,15 +610,15 @@ int main() {
 					{
 						system("cls");
 						int answer11;
-						cout << "Âàøå èìÿ: " << name << endl;
-						cout << "Î÷êè: " << score << endl;
-						cout << "Âàøè æèçíè: " << health << endl;
+						cout << "Ð’Ð°ÑˆÐµ Ð¸Ð¼Ñ: " << name << endl;
+						cout << "ÐžÑ‡ÐºÐ¸: " << score << endl;
+						cout << "Ð’Ð°ÑˆÐ¸ Ð¶Ð¸Ð·Ð½Ð¸: " << health << endl;
 						cout << question11 << endl;
-						cout << "Âàðèàíòû îòâåòîâ: \n";
+						cout << "Ð’Ð°Ñ€Ð¸Ð°Ð½Ñ‚Ñ‹ Ð¾Ñ‚Ð²ÐµÑ‚Ð¾Ð²: \n";
 						cout << "[1] 4b\n";
 						cout << "[2] 12b\n";
 						cout << "[3] 1b\n\n";
-						cout << "Âàø îòâåò: ";
+						cout << "Ð’Ð°Ñˆ Ð¾Ñ‚Ð²ÐµÑ‚: ";
 						cin >> answer11;
 						if (answer11 == 3)
 						{
@@ -632,9 +632,9 @@ int main() {
 					if (health < 1)
 					{
 						system("cls");
-						cout << "Âû ïðîèãðàëè! " << "Âàøè î÷êè: " << score << endl;
-						cout << "[1] Âûéòè\n";
-						cout << "Âûáðàòü:";
+						cout << "Ð’Ñ‹ Ð¿Ñ€Ð¾Ð¸Ð³Ñ€Ð°Ð»Ð¸! " << "Ð’Ð°ÑˆÐ¸ Ð¾Ñ‡ÐºÐ¸: " << score << endl;
+						cout << "[1] Ð’Ñ‹Ð¹Ñ‚Ð¸\n";
+						cout << "Ð’Ñ‹Ð±Ñ€Ð°Ñ‚ÑŒ:";
 						cin >> usless;
 						if (usless == 1)
 						{
@@ -650,15 +650,15 @@ int main() {
 					{
 						system("cls");
 						int answer12;
-						cout << "Âàøå èìÿ: " << name << endl;
-						cout << "Î÷êè: " << score << endl;
-						cout << "Âàøè æèçíè: " << health << endl;
+						cout << "Ð’Ð°ÑˆÐµ Ð¸Ð¼Ñ: " << name << endl;
+						cout << "ÐžÑ‡ÐºÐ¸: " << score << endl;
+						cout << "Ð’Ð°ÑˆÐ¸ Ð¶Ð¸Ð·Ð½Ð¸: " << health << endl;
 						cout << question12 << endl;
-						cout << "Âàðèàíòû îòâåòîâ: \n";
+						cout << "Ð’Ð°Ñ€Ð¸Ð°Ð½Ñ‚Ñ‹ Ð¾Ñ‚Ð²ÐµÑ‚Ð¾Ð²: \n";
 						cout << "[1] Cin\n";
 						cout << "[2] Cout\n";
 						cout << "[3] Endl\n\n";
-						cout << "Âàø îòâåò: ";
+						cout << "Ð’Ð°Ñˆ Ð¾Ñ‚Ð²ÐµÑ‚: ";
 						cin >> answer12;
 						if (answer12 == 2)
 						{
@@ -672,9 +672,9 @@ int main() {
 					if (health < 1)
 					{
 						system("cls");
-						cout << "Âû ïðîèãðàëè! " << "Âàøè î÷êè: " << score << endl;
-						cout << "[1] Âûéòè\n";
-						cout << "Âûáðàòü:";
+						cout << "Ð’Ñ‹ Ð¿Ñ€Ð¾Ð¸Ð³Ñ€Ð°Ð»Ð¸! " << "Ð’Ð°ÑˆÐ¸ Ð¾Ñ‡ÐºÐ¸: " << score << endl;
+						cout << "[1] Ð’Ñ‹Ð¹Ñ‚Ð¸\n";
+						cout << "Ð’Ñ‹Ð±Ñ€Ð°Ñ‚ÑŒ:";
 						cin >> usless;
 						if (usless == 1)
 						{
@@ -689,8 +689,8 @@ int main() {
 					else
 					{
 						int n;
-						cout << "Âû ïîáåäèëè! Ó âàñ: " << score << " î÷êîâ\n";
-						cout << "[1] Âûéòè â ìåíþ";
+						cout << "Ð’Ñ‹ Ð¿Ð¾Ð±ÐµÐ´Ð¸Ð»Ð¸! Ð£ Ð²Ð°Ñ: " << score << " Ð¾Ñ‡ÐºÐ¾Ð²\n";
+						cout << "[1] Ð’Ñ‹Ð¹Ñ‚Ð¸ Ð² Ð¼ÐµÐ½ÑŽ";
 						cin >> n;
 						if (n == 1)
 						{
@@ -703,8 +703,8 @@ int main() {
 				{
 					int qwe;
 					system("cls");
-					cout << "Ââåäèòå èìÿ è êîëè÷åñòâî âîïðîñîâ â íàñòðîéêàõ\n";
-					cout << "[1] Âûéòè\n";
+					cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Ñ Ð¸ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð²Ð¾Ð¿Ñ€Ð¾ÑÐ¾Ð² Ð² Ð½Ð°ÑÑ‚Ñ€Ð¾Ð¹ÐºÐ°Ñ…\n";
+					cout << "[1] Ð’Ñ‹Ð¹Ñ‚Ð¸\n";
 					cin >> qwe;
 					if (qwe == 1)
 					{
@@ -721,12 +721,12 @@ int main() {
 		if (menu == "3")
 		{
 			system("cls");
-			cout << "Ïðàâèëà:\n";
-			cout << "Çà êàæäûé ïðàâèëüíûé îòâåò âû ïîëó÷àåòå îäíî î÷êî\n";
-			cout << "Çà êàæäíûé íå ïðàâèëüíûé îòâåò ó âàñ îòíèìàåòñÿ îäíà æèçíü\n";
-			cout << "Óäà÷è!\n\n";
-			cout << "[1] Íàçàä\n\n";
-			cout << "[+] Âûáðàòü: ";
+			cout << "ÐŸÑ€Ð°Ð²Ð¸Ð»Ð°:\n";
+			cout << "Ð—Ð° ÐºÐ°Ð¶Ð´Ñ‹Ð¹ Ð¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ñ‹Ð¹ Ð¾Ñ‚Ð²ÐµÑ‚ Ð²Ñ‹ Ð¿Ð¾Ð»ÑƒÑ‡Ð°ÐµÑ‚Ðµ Ð¾Ð´Ð½Ð¾ Ð¾Ñ‡ÐºÐ¾\n";
+			cout << "Ð—Ð° ÐºÐ°Ð¶Ð´Ð½Ñ‹Ð¹ Ð½Ðµ Ð¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ñ‹Ð¹ Ð¾Ñ‚Ð²ÐµÑ‚ Ñƒ Ð²Ð°Ñ Ð¾Ñ‚Ð½Ð¸Ð¼Ð°ÐµÑ‚ÑÑ Ð¾Ð´Ð½Ð° Ð¶Ð¸Ð·Ð½ÑŒ\n";
+			cout << "Ð£Ð´Ð°Ñ‡Ð¸!\n\n";
+			cout << "[1] ÐÐ°Ð·Ð°Ð´\n\n";
+			cout << "[+] Ð’Ñ‹Ð±Ñ€Ð°Ñ‚ÑŒ: ";
 			cin >> exit;
 			if (exit == 1)
 			{
@@ -740,12 +740,12 @@ int main() {
 		if (menu == "2")
 		{
 			system("cls");
-			cout << "Íàñòðîéêè:\n\n";
-			cout << "[1] Öâåò\n";
-			cout << "[2] Êîë-âî âîïðîñîâ\n";
-			cout << "[3] Èìÿ èãðîêà\n";
-			cout << "[4] Íàçàä\n\n";
-			cout << "[+]Âûáðàòü: ";
+			cout << "ÐÐ°ÑÑ‚Ñ€Ð¾Ð¹ÐºÐ¸:\n\n";
+			cout << "[1] Ð¦Ð²ÐµÑ‚\n";
+			cout << "[2] ÐšÐ¾Ð»-Ð²Ð¾ Ð²Ð¾Ð¿Ñ€Ð¾ÑÐ¾Ð²\n";
+			cout << "[3] Ð˜Ð¼Ñ Ð¸Ð³Ñ€Ð¾ÐºÐ°\n";
+			cout << "[4] ÐÐ°Ð·Ð°Ð´\n\n";
+			cout << "[+]Ð’Ñ‹Ð±Ñ€Ð°Ñ‚ÑŒ: ";
 
 			string settings;
 			short colors;
@@ -753,13 +753,13 @@ int main() {
 			if (settings == "1")
 			{
 				system("cls");
-				cout << "Âûáðàòü öâåò:\n\n";
-				cout << "[1] Æ¸ëòûé\n";
-				cout << "[2] Çåëåíûé\n";
-				cout << "[3] Êðàñíûé\n";
-				cout << "[4] Ñèíèé\n";
-				cout << "[5] Ôèîëåòîâûé\n\n";
-				cout << "[+]Âûáðàòü: ";
+				cout << "Ð’Ñ‹Ð±Ñ€Ð°Ñ‚ÑŒ Ñ†Ð²ÐµÑ‚:\n\n";
+				cout << "[1] Ð–Ñ‘Ð»Ñ‚Ñ‹Ð¹\n";
+				cout << "[2] Ð—ÐµÐ»ÐµÐ½Ñ‹Ð¹\n";
+				cout << "[3] ÐšÑ€Ð°ÑÐ½Ñ‹Ð¹\n";
+				cout << "[4] Ð¡Ð¸Ð½Ð¸Ð¹\n";
+				cout << "[5] Ð¤Ð¸Ð¾Ð»ÐµÑ‚Ð¾Ð²Ñ‹Ð¹\n\n";
+				cout << "[+]Ð’Ñ‹Ð±Ñ€Ð°Ñ‚ÑŒ: ";
 				cin >> colors;
 				if (colors == 1)
 				{
@@ -786,10 +786,10 @@ int main() {
 			{
 				short abc;
 				system("cls");
-				cout << "Âûáðàòü êîë-âî âîïðîñîâ:\n\n";
+				cout << "Ð’Ñ‹Ð±Ñ€Ð°Ñ‚ÑŒ ÐºÐ¾Ð»-Ð²Ð¾ Ð²Ð¾Ð¿Ñ€Ð¾ÑÐ¾Ð²:\n\n";
 				cout << "[1] 5\n";
 				cout << "[2] 12\n\n";
-				cout << "[+] Âûáðàòü: ";
+				cout << "[+] Ð’Ñ‹Ð±Ñ€Ð°Ñ‚ÑŒ: ";
 				cin >> abc;
 				if (abc == 1)
 				{
@@ -803,7 +803,7 @@ int main() {
 			if (settings == "3")
 			{
 				system("cls");
-				cout << "[+] Ââåäèòå èìÿ èãðîêà: \n";
+				cout << "[+] Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Ñ Ð¸Ð³Ñ€Ð¾ÐºÐ°: \n";
 				cin >> name;
 				continue;
 			}
