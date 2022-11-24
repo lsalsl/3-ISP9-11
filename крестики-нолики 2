@@ -1,0 +1,1159 @@
+#include <iostream>
+#include <Windows.h>
+using namespace std;
+
+
+int main()
+{
+
+    setlocale(0, "");
+
+    int kto_hodit = 1, pobedytel = 0, chel_1_win = 0, chel_2_win = 0, chel_1_proigrish = 0, chel_2_proigrish = 0, chel_1_ni4ya = 0, chel_2_ni4ya = 0;
+    string figura_1 = "X", figura_2 = "O";
+    string prefix = "\033[93mDP\033[0m | ", nik_chela_1 = "", nik_chela_2 = "";
+    string pole[1][9] = {
+        {" "," "," "," "," "," "," "," "," "},
+    };
+
+menu:
+    system("cls");
+    cout << endl;
+    cout << prefix << "Крестики нолики" << endl << endl;
+    cout << prefix << "\033[91m[1] \033[0m- начать игру" << endl;
+    cout << prefix << "\033[91m[2] \033[0m- статистика" << endl;
+    cout << prefix << "\033[91m[3] \033[0m- настройки" << endl;
+    cout << prefix << "\033[91m[4] \033[0m- выйти" << endl << endl;
+    cout << "----> ";
+
+    int deystviye;
+    cin >> deystviye;
+    switch (deystviye)
+    {
+    case 1:
+    {
+    meow:
+
+
+        system("cls");
+        cout << endl << endl << endl << endl;
+
+        if (pobedytel != 0)
+        {
+            if (pobedytel == 1)
+            {
+                chel_1_win++;
+                chel_2_proigrish++;
+                if (nik_chela_1 == "")
+                    cout << "\t\tПобедил игрок \033[91m№" << pobedytel << "\033[0m" << endl << endl;
+                else
+                    cout << "\t\tПобедил игрок \033[91m" << nik_chela_1 << "\033[0m" << endl << endl;
+            }
+            else
+            {
+                chel_2_win++;
+                chel_1_proigrish++;
+                if (nik_chela_2 == "")
+                    cout << "\t\tПобедил игрок \033[94m№" << pobedytel << "\033[0m" << endl << endl;
+                else
+                    cout << "\t\tПобедил игрок \033[94m" << nik_chela_2 << "\033[0m" << endl << endl;
+            }
+
+            cout << "Будем дальше играца ? 1 - да | 0 - нет " << endl;
+            cout << "----> ";
+            int value;
+            cin >> value;
+
+            kto_hodit = 1; pobedytel = false;
+
+            for (int i = 0; i < 9; i++) pole[0][i] = " ";
+
+            if (value == 1) goto meow;
+            else goto menu;
+        }
+        else if (kto_hodit == 1)
+        {
+            if (nik_chela_1 == "")
+                cout << "\t\tXодит игрок: \033[91m№" << kto_hodit << "\033[0m" << endl << endl;
+            else
+                cout << "\t\tXодит игрок: \033[91m" << nik_chela_1 << "\033[0m" << endl << endl;
+        }
+        else if (kto_hodit == 2)
+        {
+            if (nik_chela_2 == "")
+                cout << "\t\tXодит игрок: \033[94m№" << kto_hodit << "\033[0m" << endl << endl;
+            else
+                cout << "\t\tXодит игрок: \033[94m" << nik_chela_2 << "\033[0m" << endl << endl;
+        }
+
+        cout << "\t\t\t" << pole[0][0] << " | " << pole[0][1] << " | " << pole[0][2] << endl;
+        cout << "\t\t\t" << "--+---+--" << endl;
+        cout << "\t\t\t" << pole[0][3] << " | " << pole[0][4] << " | " << pole[0][5] << endl;
+        cout << "\t\t\t" << "--+---+--" << endl;
+        cout << "\t\t\t" << pole[0][6] << " | " << pole[0][7] << " | " << pole[0][8] << endl << endl << endl;
+        cout << "----> ";
+        int kudastavit;
+        cin >> kudastavit;
+
+        if (pole[0][kudastavit - 1] == figura_1 || pole[0][kudastavit - 1] == figura_2)
+        {
+            goto meow;
+        }
+
+        switch (kudastavit)
+        {
+        case 1:
+        {
+
+            if (kto_hodit == 1)
+            {
+                kto_hodit = 2;
+                pole[0][0] = figura_1;
+            }
+            else
+            {
+                kto_hodit = 1;
+                pole[0][0] = figura_2;
+            }
+
+            if (pole[0][0] == figura_1 && pole[0][1] == figura_1 && pole[0][2] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][3] == figura_1 && pole[0][4] == figura_1 && pole[0][5] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][6] == figura_1 && pole[0][7] == figura_1 && pole[0][8] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][0] == figura_1 && pole[0][3] == figura_1 && pole[0][6] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][1] == figura_1 && pole[0][4] == figura_1 && pole[0][7] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][2] == figura_1 && pole[0][5] == figura_1 && pole[0][8] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][0] == figura_1 && pole[0][4] == figura_1 && pole[0][8] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][2] == figura_1 && pole[0][4] == figura_1 && pole[0][6] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else
+            {
+                if (pole[0][0] == figura_2 && pole[0][1] == figura_2 && pole[0][2] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][3] == figura_2 && pole[0][4] == figura_2 && pole[0][5] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][6] == figura_2 && pole[0][7] == figura_2 && pole[0][8] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][0] == figura_2 && pole[0][3] == figura_2 && pole[0][6] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][1] == figura_2 && pole[0][4] == figura_2 && pole[0][7] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][2] == figura_2 && pole[0][5] == figura_2 && pole[0][8] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][0] == figura_2 && pole[0][4] == figura_2 && pole[0][8] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][2] == figura_2 && pole[0][4] == figura_2 && pole[0][6] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+            }
+            break;
+        }
+        case 2:
+        {
+            if (kto_hodit == 1)
+            {
+                kto_hodit = 2;
+                pole[0][1] = figura_1;
+            }
+            else
+            {
+                kto_hodit = 1;
+                pole[0][1] = figura_2;
+            }
+
+            if (pole[0][0] == figura_1 && pole[0][1] == figura_1 && pole[0][2] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][3] == figura_1 && pole[0][4] == figura_1 && pole[0][5] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][6] == figura_1 && pole[0][7] == figura_1 && pole[0][8] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][0] == figura_1 && pole[0][3] == figura_1 && pole[0][6] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][1] == figura_1 && pole[0][4] == figura_1 && pole[0][7] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][2] == figura_1 && pole[0][5] == figura_1 && pole[0][8] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][0] == figura_1 && pole[0][4] == figura_1 && pole[0][8] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][2] == figura_1 && pole[0][4] == figura_1 && pole[0][6] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else
+            {
+                if (pole[0][0] == figura_2 && pole[0][1] == figura_2 && pole[0][2] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][3] == figura_2 && pole[0][4] == figura_2 && pole[0][5] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][6] == figura_2 && pole[0][7] == figura_2 && pole[0][8] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][0] == figura_2 && pole[0][3] == figura_2 && pole[0][6] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][1] == figura_2 && pole[0][4] == figura_2 && pole[0][7] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][2] == figura_2 && pole[0][5] == figura_2 && pole[0][8] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][0] == figura_2 && pole[0][4] == figura_2 && pole[0][8] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][2] == figura_2 && pole[0][4] == figura_2 && pole[0][6] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+            }
+            break;
+        }
+        case 3:
+        {
+            if (kto_hodit == 1)
+            {
+                kto_hodit = 2;
+                pole[0][2] = figura_1;
+            }
+            else
+            {
+                kto_hodit = 1;
+                pole[0][2] = figura_2;
+            }
+
+            if (pole[0][0] == figura_1 && pole[0][1] == figura_1 && pole[0][2] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][3] == figura_1 && pole[0][4] == figura_1 && pole[0][5] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][6] == figura_1 && pole[0][7] == figura_1 && pole[0][8] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][0] == figura_1 && pole[0][3] == figura_1 && pole[0][6] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][1] == figura_1 && pole[0][4] == figura_1 && pole[0][7] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][2] == figura_1 && pole[0][5] == figura_1 && pole[0][8] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][0] == figura_1 && pole[0][4] == figura_1 && pole[0][8] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][2] == figura_1 && pole[0][4] == figura_1 && pole[0][6] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else
+            {
+                if (pole[0][0] == figura_2 && pole[0][1] == figura_2 && pole[0][2] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][3] == figura_2 && pole[0][4] == figura_2 && pole[0][5] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][6] == figura_2 && pole[0][7] == figura_2 && pole[0][8] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][0] == figura_2 && pole[0][3] == figura_2 && pole[0][6] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][1] == figura_2 && pole[0][4] == figura_2 && pole[0][7] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][2] == figura_2 && pole[0][5] == figura_2 && pole[0][8] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][0] == figura_2 && pole[0][4] == figura_2 && pole[0][8] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][2] == figura_2 && pole[0][4] == figura_2 && pole[0][6] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+            }
+            break;
+        }
+        case 4:
+        {
+            if (kto_hodit == 1)
+            {
+                kto_hodit = 2;
+                pole[0][3] = figura_1;
+            }
+            else
+            {
+                kto_hodit = 1;
+                pole[0][3] = figura_2;
+            }
+
+            if (pole[0][0] == figura_1 && pole[0][1] == figura_1 && pole[0][2] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][3] == figura_1 && pole[0][4] == figura_1 && pole[0][5] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][6] == figura_1 && pole[0][7] == figura_1 && pole[0][8] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][0] == figura_1 && pole[0][3] == figura_1 && pole[0][6] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][1] == figura_1 && pole[0][4] == figura_1 && pole[0][7] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][2] == figura_1 && pole[0][5] == figura_1 && pole[0][8] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][0] == figura_1 && pole[0][4] == figura_1 && pole[0][8] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][2] == figura_1 && pole[0][4] == figura_1 && pole[0][6] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else
+            {
+                if (pole[0][0] == figura_2 && pole[0][1] == figura_2 && pole[0][2] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][3] == figura_2 && pole[0][4] == figura_2 && pole[0][5] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][6] == figura_2 && pole[0][7] == figura_2 && pole[0][8] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][0] == figura_2 && pole[0][3] == figura_2 && pole[0][6] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][1] == figura_2 && pole[0][4] == figura_2 && pole[0][7] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][2] == figura_2 && pole[0][5] == figura_2 && pole[0][8] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][0] == figura_2 && pole[0][4] == figura_2 && pole[0][8] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][2] == figura_2 && pole[0][4] == figura_2 && pole[0][6] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+            }
+            break;
+        }
+        case 5:
+        {
+            if (kto_hodit == 1)
+            {
+                kto_hodit = 2;
+                pole[0][4] = figura_1;
+            }
+            else
+            {
+                kto_hodit = 1;
+                pole[0][4] = figura_2;
+            }
+
+            if (pole[0][0] == figura_1 && pole[0][1] == figura_1 && pole[0][2] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][3] == figura_1 && pole[0][4] == figura_1 && pole[0][5] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][6] == figura_1 && pole[0][7] == figura_1 && pole[0][8] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][0] == figura_1 && pole[0][3] == figura_1 && pole[0][6] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][1] == figura_1 && pole[0][4] == figura_1 && pole[0][7] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][2] == figura_1 && pole[0][5] == figura_1 && pole[0][8] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][0] == figura_1 && pole[0][4] == figura_1 && pole[0][8] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][2] == figura_1 && pole[0][4] == figura_1 && pole[0][6] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else
+            {
+                if (pole[0][0] == figura_2 && pole[0][1] == figura_2 && pole[0][2] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][3] == figura_2 && pole[0][4] == figura_2 && pole[0][5] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][6] == figura_2 && pole[0][7] == figura_2 && pole[0][8] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][0] == figura_2 && pole[0][3] == figura_2 && pole[0][6] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][1] == figura_2 && pole[0][4] == figura_2 && pole[0][7] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][2] == figura_2 && pole[0][5] == figura_2 && pole[0][8] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][0] == figura_2 && pole[0][4] == figura_2 && pole[0][8] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][2] == figura_2 && pole[0][4] == figura_2 && pole[0][6] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+            }
+            break;
+        }
+        case 6:
+        {
+            if (kto_hodit == 1)
+            {
+                kto_hodit = 2;
+                pole[0][5] = figura_1;
+            }
+            else
+            {
+                kto_hodit = 1;
+                pole[0][5] = figura_2;
+            }
+
+            if (pole[0][0] == figura_1 && pole[0][1] == figura_1 && pole[0][2] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][3] == figura_1 && pole[0][4] == figura_1 && pole[0][5] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][6] == figura_1 && pole[0][7] == figura_1 && pole[0][8] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][0] == figura_1 && pole[0][3] == figura_1 && pole[0][6] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][1] == figura_1 && pole[0][4] == figura_1 && pole[0][7] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][2] == figura_1 && pole[0][5] == figura_1 && pole[0][8] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][0] == figura_1 && pole[0][4] == figura_1 && pole[0][8] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][2] == figura_1 && pole[0][4] == figura_1 && pole[0][6] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else
+            {
+                if (pole[0][0] == figura_2 && pole[0][1] == figura_2 && pole[0][2] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][3] == figura_2 && pole[0][4] == figura_2 && pole[0][5] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][6] == figura_2 && pole[0][7] == figura_2 && pole[0][8] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][0] == figura_2 && pole[0][3] == figura_2 && pole[0][6] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][1] == figura_2 && pole[0][4] == figura_2 && pole[0][7] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][2] == figura_2 && pole[0][5] == figura_2 && pole[0][8] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][0] == figura_2 && pole[0][4] == figura_2 && pole[0][8] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][2] == figura_2 && pole[0][4] == figura_2 && pole[0][6] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+            }
+            break;
+        }
+        case 7:
+        {
+            if (kto_hodit == 1)
+            {
+                kto_hodit = 2;
+                pole[0][6] = figura_1;
+            }
+            else
+            {
+                kto_hodit = 1;
+                pole[0][6] = figura_2;
+            }
+
+            if (pole[0][0] == figura_1 && pole[0][1] == figura_1 && pole[0][2] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][3] == figura_1 && pole[0][4] == figura_1 && pole[0][5] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][6] == figura_1 && pole[0][7] == figura_1 && pole[0][8] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][0] == figura_1 && pole[0][3] == figura_1 && pole[0][6] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][1] == figura_1 && pole[0][4] == figura_1 && pole[0][7] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][2] == figura_1 && pole[0][5] == figura_1 && pole[0][8] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][0] == figura_1 && pole[0][4] == figura_1 && pole[0][8] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][2] == figura_1 && pole[0][4] == figura_1 && pole[0][6] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else
+            {
+                if (pole[0][0] == figura_2 && pole[0][1] == figura_2 && pole[0][2] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][3] == figura_2 && pole[0][4] == figura_2 && pole[0][5] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][6] == figura_2 && pole[0][7] == figura_2 && pole[0][8] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][0] == figura_2 && pole[0][3] == figura_2 && pole[0][6] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][1] == figura_2 && pole[0][4] == figura_2 && pole[0][7] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][2] == figura_2 && pole[0][5] == figura_2 && pole[0][8] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][0] == figura_2 && pole[0][4] == figura_2 && pole[0][8] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][2] == figura_2 && pole[0][4] == figura_2 && pole[0][6] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+            }
+            break;
+        }
+        case 8:
+        {
+            if (kto_hodit == 1)
+            {
+                kto_hodit = 2;
+                pole[0][7] = figura_1;
+            }
+            else
+            {
+                kto_hodit = 1;
+                pole[0][7] = figura_2;
+            }
+
+            if (pole[0][0] == figura_1 && pole[0][1] == figura_1 && pole[0][2] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][3] == figura_1 && pole[0][4] == figura_1 && pole[0][5] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][6] == figura_1 && pole[0][7] == figura_1 && pole[0][8] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][0] == figura_1 && pole[0][3] == figura_1 && pole[0][6] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][1] == figura_1 && pole[0][4] == figura_1 && pole[0][7] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][2] == figura_1 && pole[0][5] == figura_1 && pole[0][8] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][0] == figura_1 && pole[0][4] == figura_1 && pole[0][8] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][2] == figura_1 && pole[0][4] == figura_1 && pole[0][6] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else
+            {
+                if (pole[0][0] == figura_2 && pole[0][1] == figura_2 && pole[0][2] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][3] == figura_2 && pole[0][4] == figura_2 && pole[0][5] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][6] == figura_2 && pole[0][7] == figura_2 && pole[0][8] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][0] == figura_2 && pole[0][3] == figura_2 && pole[0][6] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][1] == figura_2 && pole[0][4] == figura_2 && pole[0][7] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][2] == figura_2 && pole[0][5] == figura_2 && pole[0][8] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][0] == figura_2 && pole[0][4] == figura_2 && pole[0][8] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][2] == figura_2 && pole[0][4] == figura_2 && pole[0][6] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+            }
+            break;
+        }
+        case 9:
+        {
+            if (kto_hodit == 1)
+            {
+                kto_hodit = 2;
+                pole[0][8] = figura_1;
+            }
+            else
+            {
+                kto_hodit = 1;
+                pole[0][8] = "\033[94mO\033[0m";
+            }
+
+            if (pole[0][0] == figura_1 && pole[0][1] == figura_1 && pole[0][2] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][3] == figura_1 && pole[0][4] == figura_1 && pole[0][5] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][6] == figura_1 && pole[0][7] == figura_1 && pole[0][8] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][0] == figura_1 && pole[0][3] == figura_1 && pole[0][6] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][1] == figura_1 && pole[0][4] == figura_1 && pole[0][7] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][2] == figura_1 && pole[0][5] == figura_1 && pole[0][8] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][0] == figura_1 && pole[0][4] == figura_1 && pole[0][8] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else if (pole[0][2] == figura_1 && pole[0][4] == figura_1 && pole[0][6] == figura_1)
+            {
+                pobedytel = 1;
+                goto meow;
+            }
+            else
+            {
+                if (pole[0][0] == figura_2 && pole[0][1] == figura_2 && pole[0][2] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][3] == figura_2 && pole[0][4] == figura_2 && pole[0][5] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][6] == figura_2 && pole[0][7] == figura_2 && pole[0][8] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][0] == figura_2 && pole[0][3] == figura_2 && pole[0][6] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][1] == figura_2 && pole[0][4] == figura_2 && pole[0][7] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][2] == figura_2 && pole[0][5] == figura_2 && pole[0][8] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][0] == figura_2 && pole[0][4] == figura_2 && pole[0][8] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+                else if (pole[0][2] == figura_2 && pole[0][4] == figura_2 && pole[0][6] == figura_2)
+                {
+                    pobedytel = 2;
+                    goto meow;
+                }
+            }
+            break;
+        }
+        default:
+            break;
+        }
+
+        goto meow;
+    }
+    case 2:
+    {
+        system("cls");
+        cout << prefix << "Стата" << endl << endl;
+        cout << "\t\t\t\033[4m\033[92mW\033[0m\t\033[4m\033[91mL\033[0m\t\033[4m\033[90mD\033[0m\t|\tОчки" << endl;
+        if (nik_chela_1 == "")
+            cout << "Игрок 1\t\t\t" << chel_1_win << "\t" << chel_1_proigrish << "\t" << chel_1_ni4ya << "\t|\t" << chel_1_win * 5 + chel_1_proigrish * -6 << endl;
+        else
+            cout << nik_chela_1 << "\t\t\t" << chel_1_win << "\t" << chel_1_proigrish << "\t" << chel_1_ni4ya << "\t | \t" << chel_1_win * 5 + chel_1_proigrish * -6 << endl;
+        if (nik_chela_2 == "")
+            cout << "Игрок 2\t\t\t" << chel_2_win << "\t" << chel_2_proigrish << "\t" << chel_2_ni4ya << "\t|\t" << chel_2_win * 5 + chel_2_proigrish * -6 << endl;
+        else
+            cout << nik_chela_2 << "\t\t\t" << chel_2_win << "\t" << chel_2_proigrish << "\t" << chel_2_ni4ya << "\t|\t" << chel_2_win * 5 + chel_2_proigrish * -6 << endl;
+        cout << "Компьютер\t\t1\t1\t1\t|\tScore" << endl << endl;
+        cout << "\033[91m[1]\033[0m Вернуться назад" << endl;
+        cout << "----> ";
+        int value;
+        cin >> value;
+
+        if (value == 1) goto menu;
+        else return 0;
+
+        break;
+    }
+    case 3:
+    {
+    nastroyka:
+        cout << prefix << "Настройки игрока" << endl << endl;
+        if (nik_chela_1 == "")
+            cout << "[1] | Игрок 1" << endl;
+        else
+            cout << "[1] | " << nik_chela_1 << endl;
+        if (nik_chela_2 == "")
+            cout << "[2] | Игрок 2" << endl;
+        else
+            cout << "[2] | " << nik_chela_2 << endl << endl;
+        cout << "[3] | Выйти в главное меню " << endl;
+        cout << "----> ";
+
+        int vibor;
+        cin >> vibor;
+
+        if (vibor == 1) {
+            if (nik_chela_1 == "")
+                cout << prefix << "Настройки игрока [1]" << endl << endl;
+            else
+                cout << prefix << "Настройки игрока " << nik_chela_1 << endl << endl;
+            cout << "[1] | Ник" << endl;
+            cout << "[2] | Фигура: " << figura_1 << endl;
+            cout << "[3] | Цвет " << endl << endl;
+            cout << "[4] | Выйти в главное меню " << endl;
+            cout << "----> ";
+
+            int vibor2;
+            cin >> vibor2;
+
+            switch (vibor2)
+            {
+            case 1:
+            {
+                cout << "Введите ваш новый ник" << endl;
+                cout << "----> ";
+                string nick;
+                cin >> nick;
+                nik_chela_1 = nick;
+
+                system("cls");
+
+                goto nastroyka;
+
+            }
+            case 2:
+            {
+                cout << "Введите вашу фигуру" << endl;
+                cout << "----> ";
+                string figura;
+                cin >> figura;
+                figura_1 = figura;
+
+                system("cls");
+
+                goto nastroyka;
+            }
+            case 3:
+            {
+                cout << "\033[91mВ разработке........\033[0m" << endl << endl;
+                goto nastroyka;
+            }
+            case 4:
+            {
+                goto menu;
+            }
+            default:
+                break;
+            }
+        }
+        else if (vibor == 2) {
+            if (nik_chela_2 == "")
+                cout << prefix << "Настройки игрока [2]" << endl << endl;
+            else
+                cout << prefix << "Настройки игрока " << nik_chela_2 << endl << endl;
+            cout << "[1] | Ник" << endl;
+            cout << "[2] | Фигура: " << figura_2 << endl;
+            cout << "[3] | Цвет " << endl << endl;
+            cout << "[4] | Выйти в главное меню " << endl;
+
+            cout << "----> ";
+
+            int vibor2;
+            cin >> vibor2;
+
+            switch (vibor2)
+            {
+            case 1:
+            {
+                cout << "Введите ваш новый ник" << endl;
+                cout << "----> ";
+                string nick;
+                cin >> nick;
+                nik_chela_2 = nick;
+
+                system("cls");
+
+                goto nastroyka;
+
+            }
+            case 2:
+            {
+                cout << "Введите вашу фигуру" << endl;
+                cout << "----> ";
+                string figura;
+                cin >> figura;
+                figura_2 = figura;
+
+                system("cls");
+
+                goto nastroyka;
+            }
+            case 3:
+            {
+                cout << "\033[91mВ разработке........\033[0m" << endl << endl;
+                goto nastroyka;
+            }
+            case 4:
+            {
+                goto menu;
+            }
+            default:
+                break;
+            }
+        }
+        else if (vibor == 3) {
+            goto menu;
+        }
+        else {
+            goto nastroyka;
+        }
+        break;
+    }
+    case 4:
+    {
+        break;
+    }
+    default:
+        break;
+    }
+}
