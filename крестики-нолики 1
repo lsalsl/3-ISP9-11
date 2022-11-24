@@ -1,0 +1,271 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+int main() {
+	setlocale(0, "");
+
+	const int rows = 3;
+	const int cols = 3;
+
+	bool playerX = true;
+	while (true)
+	{
+		char arr[rows][cols] =
+		{
+			{'-', '-', '-'},
+			{'-', '-', '-'},
+			{'-', '-', '-'}
+		};
+		while (true)
+		{
+			system("cls");
+			for (int i = 0; i < rows; i++)
+			{
+				for (int j = 0; j < cols; j++)
+				{
+					cout << arr[i][j] << " " << " \t";
+				}
+				cout << "\n\n\n";
+			}
+			if (arr[0][0] == 'X' and arr[0][1] == 'X' and arr[0][2] == 'X')
+			{
+				cout << "Выиграл крестик\n\n";
+				system("pause");
+				break;
+			}
+			else if (arr[0][0] == 'O' and arr[0][1] == 'O' and arr[0][2] == 'O')
+			{
+				system("pause");
+				cout << "Выиграл нолик";
+				break;
+
+			}
+			else if (arr[1][0] == 'X' and arr[1][1] == 'X' and arr[1][2] == 'X')
+			{
+				system("pause");
+				cout << "Выиграл крестик";
+				break;
+			}
+			else if (arr[1][0] == 'O' and arr[1][1] == 'O' and arr[1][2] == 'O')
+			{
+				system("pause");
+				cout << "Выиграл нолик";
+				break;
+			}
+			else if (arr[2][0] == 'X' and arr[2][1] == 'X' and arr[2][2] == 'X')
+			{
+				system("pause");
+				cout << "Выиграл крестик";
+				break;
+			}
+			else if (arr[2][0] == 'O' and arr[2][1] == 'O' and arr[2][2] == 'O')
+			{
+				system("pause");
+				cout << "Выиграл нолик";
+				break;
+			}
+			else if (arr[0][0] == 'X' and arr[1][0] == 'X' and arr[2][0] == 'X')
+			{
+				system("pause");
+				cout << "Выиграл крестик";
+				break;
+			}
+			else if (arr[0][0] == 'O' and arr[1][0] == 'O' and arr[2][0] == 'O')
+			{
+				system("pause");
+				cout << "Выиграл нолик";
+				break;
+			}
+			else if (arr[0][1] == 'X' and arr[1][1] == 'X' and arr[2][1] == 'X')
+			{
+				system("pause");
+				cout << "Выиграл крестик";
+				break;
+			}
+			else if (arr[0][1] == 'O' and arr[1][1] == 'O' and arr[2][1] == 'O')
+			{
+				system("pause");
+				cout << "Выиграл нолик";
+				break;
+			}
+			else if (arr[0][2] == 'X' and arr[1][2] == 'X' and arr[2][2] == 'X')
+			{
+				system("pause");
+				cout << "Выиграл крестик";
+				break;
+			}
+			else if (arr[0][2] == 'O' and arr[1][2] == 'O' and arr[2][2] == 'O')
+			{
+				system("pause");
+				cout << "Выиграл нолик";
+				break;
+			}
+			else if (arr[0][0] == 'X' and arr[1][1] == 'X' and arr[2][2] == 'X')
+			{
+				system("pause");
+				cout << "Выиграл крестик";
+				break;
+			}
+			else if (arr[0][0] == 'O' and arr[1][1] == 'O' and arr[2][2] == 'O')
+			{
+				system("pause");
+				cout << "Выиграл нолик";
+				break;
+			}
+			else if (arr[0][2] == 'X' and arr[1][1] == 'X' and arr[2][0] == 'X')
+			{
+				system("pause");
+				cout << "Выиграл крестик";
+				break;
+			}
+			else if (arr[0][2] == 'O' and arr[1][1] == 'O' and arr[2][0] == 'O')
+			{
+				system("pause");
+				cout << "Выиграл  нолик";
+				break;
+			}
+			else if (arr[0][0] != '-' and arr[0][1] != '-' and arr[0][2] != '-' and arr[1][0] != '-' and arr[1][1] != '-' and arr[1][2] != '-'
+				and arr[2][0] != '-' and arr[2][1] != '-' and arr[2][2] != '-')
+			{
+				system("pause");
+				cout << "Ничья!";
+			}
+
+			char k = _getch();
+			switch (k)
+			{
+				{
+			case '1':
+				if (arr[0][0] != '-') break;
+				if (playerX == true)
+				{
+					arr[0][0] = 'X';
+					playerX = !playerX;
+				}
+				else if (playerX == false)
+				{
+					arr[0][0] = 'O';
+					playerX = !playerX;
+				}
+				break;
+			case '2':
+				if (arr[0][1] != '-') break;
+				if (playerX == true)
+				{
+					arr[0][1] = 'X';
+					playerX = !playerX;
+				}
+				else if (playerX == false)
+				{
+					arr[0][1] = 'O';
+					playerX = !playerX;
+				}
+				break;
+			case '3':
+				if (arr[0][2] != '-') break;
+				if (playerX == true)
+				{
+					arr[0][2] = 'X';
+					playerX = !playerX;
+				}
+				else if (playerX == false)
+				{
+					arr[0][2] == 'O';
+					playerX = !playerX;
+				}
+				break;
+			case '4':
+				if (arr[1][0] != '-') break;
+				if (playerX == true)
+				{
+					arr[1][0] = 'X';
+					playerX = !playerX;
+				}
+				else if (playerX == false)
+				{
+					arr[1][0] = 'O';
+					playerX = !playerX;
+				}
+				break;
+			case '5':
+				if (arr[1][1] != '-') break;
+				if (playerX == true)
+				{
+					arr[1][1] = 'X';
+					playerX = !playerX;
+				}
+				else if (playerX == false)
+				{
+					arr[1][1] = 'O';
+					playerX = !playerX;
+				}
+
+				break;
+			case '6':
+				if (arr[1][2] != '-') break;
+				if ((arr[0][0] and arr[0][1] and arr[0][2]) == 'X')
+				{
+					cout << "Выиграл крестик";
+					continue;
+				}
+				if (playerX == true)
+				{
+					arr[1][2] = 'X';
+					playerX = !playerX;
+				}
+				else if (playerX == false)
+				{
+					arr[1][2] = 'O';
+					playerX = !playerX;
+				}
+
+				break;
+			case '7':
+				if (arr[2][0] != '-') break;
+				if (playerX == true)
+				{
+					arr[2][0] = 'X';
+					playerX = !playerX;
+				}
+				else if (playerX == false)
+				{
+					arr[2][0] = 'O';
+					playerX = !playerX;
+				}
+				break;
+			case '8':
+				if (arr[2][1] != '-') break;
+				if (playerX == true)
+				{
+					arr[2][1] = 'X';
+					playerX = !playerX;
+				}
+				else if (playerX == false)
+				{
+					arr[2][1] = 'O';
+					playerX = !playerX;
+				}
+				break;
+			case '9':
+				if (arr[2][2] != '-') break;
+				if (playerX == true)
+				{
+					arr[2][2] = 'X';
+					playerX = !playerX;
+				}
+				else if (playerX == false)
+				{
+					arr[2][2] = 'O';
+					playerX = !playerX;
+				}
+				break;
+				}
+			}
+			continue;
+		}
+	}
+
+	int _;
+	cin >> _;
+	return 0;
+}
